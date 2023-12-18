@@ -8,12 +8,66 @@ Para esta se retomaron clases y se creó una guía técnica del desarrollo de la
   <img src='./client/src/images/kidsCitiesTwo.png' alt='background img.' />
     </p>
 
-
 <details>
     <summary>DIA 01.- 17/Dic/23 - <b> BackEnd</b> </summary>
         <ul>
         <li> Creación carpeta para imágenes del codeo diario y evolución / incluye videos.</li> 
-        <li> Verificación de la estructura del proyecto. Trae client y server. En server gran parte montado. <a href="./sunnyEvolutionImgs/apiFormat.png">Imagen de como viene la api</a>
-        </li> 
-         </ul>
+        <li> Verificación de la estructura del proyecto. Trae client y server. En server gran parte montado.</a>
+<li> 
+<details>
+  <summary>
+    Análisis del Obj País
+  </summary>
+  <ul>
+    <li>Total de propiedades: 41</li>
+  </ul>
+  <ul> <b> ARRAY DE OBJS [{}, {}] </b>
+    <li>Top-Level Domain (tld): Array con 1 elemento (".co").</li>
+    <li>Latitud y Longitud (latlng): Array con 2 elementos (latitud y longitud).</li>
+    <li>Países vecinos (borders): Array con 5 elementos (códigos de país).</li>
+  </ul>
+  <ul> <b> OBJETOS </b>
+    <li>Nombre (name): Objeto con 3 propiedades (common, official, nativeName).</li>
+    <li>Nombre Nativo (nativeName): Objeto con 1 propiedad (spa).</li>
+    <li>Monedas (currencies): Objeto con 1 propiedad (COP).</li>
+    <li>Códigos Internacionales (idd): Objeto con 2 propiedades (root, suffixes).</li>
+    <li>Idiomas (languages): Objeto con 1 propiedad (spa).</li>
+    <li>Traducciones (translations): Objeto con múltiples propiedades (árabe, checo, galés, alemán, etc.).</li>
+    <li>Gentilicios (demonyms): Objeto con 2 propiedades (eng, fra).</li>
+    <li>Enlaces a mapas (maps): Objeto con 2 propiedades (googleMaps, openStreetMaps).</li>
+    <li>Coeficiente Gini (gini): Objeto con 1 propiedad (2019).</li>
+    <li>Enlaces a banderas (flags): Objeto con 2 propiedades (png, svg).</li>
+    <li>Escudo de Armas (coatOfArms): Objeto con 2 propiedades (png, svg).</li>
+    <li>Inicio de la semana (startOfWeek): Objeto con 1 propiedad (monday).</li>
+    <li>Información de la capital (capitalInfo): Objeto con 1 propiedad (latlng).</li>
+  </ul>
+  <ul> <b> ANIDAMIENTOS </b>
+    <li>Nombre tiene una propiedad anidada (Nombre Nativo).</li>
+    <li>Nombre Nativo tiene una propiedad anidada (spa).</li>
+    <li>Monedas tiene una propiedad anidada (COP).</li>
+    <li>Códigos Internacionales tiene una propiedad anidada (suffixes).</li>
+    <li>Gentilicios tiene dos propiedades anidadas (eng, fra).</li>
+    <li>Enlaces a mapas tiene dos propiedades anidadas (googleMaps, openStreetMaps).</li>
+    <li>Enlaces a banderas tiene dos propiedades anidadas (png, svg).</li>
+    <li>Escudo de Armas tiene dos propiedades anidadas (png, svg).</li>
+    <li>Información de la capital tiene una propiedad anidada (latlng).</li>
+<li> <img src="./sunnyEvolutionImgs/apiFormat.png" alt="Api structure"/></li>
+  </ul>
 </details>
+</li>
+</li>
+
+ 
+<li> <details> <summary> Verificación del packege.json identificando: a) axios, b) concurrently para 2 puertos al tiempo, c) cors, d) dotenv, e) express, f) json-server, g) morgan, h) nodemon, i) npm-run-all, j) pg, k) pg-hstore, l) sequelize. 
+      </summary>
+      <li> <img src='./sunnyEvolutionImgs/dependencies.png' alt='Imagen dependencias'/>  </li>
+      <ul>
+ </li>
+</details>
+
+ <li> <details> <summary>Creación estructura archivos en el back</summary> 
+ <p> Se crean las diferentes carpetas que manejaran la lógica. 
+ </p>
+ <img src='./sunnyEvolutionImgs/backFoldersStructure.png' alt='Estructura archivos'/>
+ </li> 
+         </ul>
