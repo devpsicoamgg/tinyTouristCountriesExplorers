@@ -70,4 +70,34 @@ Para esta se retomaron clases y se creó una guía técnica del desarrollo de la
  </p>
  <img src='./sunnyEvolutionImgs/backFoldersStructure.png' alt='Estructura archivos'/>
  </li> 
+ 
+<li> <details> <summary>npm i para instalar las dependencias</summary> 
+ <p> Se instalan las dependencias. 
+ </p>
+ <img src='./sunnyEvolutionImgs/installDeps.png' alt='npm install'/>
+ </li> 
+ 
+<li> <details> <summary>Se crea la base de datos llamada tinytouristcountriesexplorers </summary> 
+ <p> Se crea mediante CREATE DATABASE tinytouristcountriesexplorers;
+ </p>
+ <img src='./sunnyEvolutionImgs/bdcreation.png' alt='Variables de entornos'/>
+ </li> 
+
+ <li> <details> <summary>Se configuran variables de entorno .env / dotenv()</summary> 
+ <p> Se hace configuración inicial del .env y se crea en esta la variable de DB_NAME la cual se modifica en db.js. 
+ </p>
+ <img src='./sunnyEvolutionImgs/dbenvconfigura.png' alt='Variables de entornos'/>
+ <img src='./sunnyEvolutionImgs/dbenvconfigura2.png' alt='Modificación en base de datos'/>
+ </li> 
+
+ <li> <details> <summary>Se lanza npm start para verificar correcto funcionameinto </summary> 
+ <img src='./sunnyEvolutionImgs/npmstart.png' alt='npm start'/>
+ </li> 
+
+  <li> <details> <summary>Se configura puerto y se da firma personal según el proyecto</summary> 
+ <p> se modifican tanto como index como db.  
+ </p>
+ <img src='./sunnyEvolutionImgs/renamedtheserver.png' alt='Renombrando el servidor'/>
+ <img src='./sunnyEvolutionImgs/dbrenamedtheserver.png' alt='configurando nombre en bd'/>
+ </li> 
          </ul>
