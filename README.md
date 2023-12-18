@@ -119,4 +119,18 @@ DIA 2. 18-Dic-23
       Tu navegador no soporta el elemento de video.
     </video>
   </li>
+
+  <li> <details> <summary>Se modularizan rutas tanto del get como del post.  </summary> 
+  <p> Se generan 2 carpetas para las rutas </p>
+ <img src='./sunnyEvolutionImgs/carpetasrutas.png' alt='Carpeta Rutas'/>
+ <li>los archivos se ven así: </li>
+ <img src='./sunnyEvolutionImgs/routes1mod.png' alt='Js Rutas 1 all Main'/>
+ <img src='./sunnyEvolutionImgs/routes2mod.png' alt='Js Rutas 2 post Activities'/>
+ <img src='./sunnyEvolutionImgs/routes3mod.png' alt='Js Rutas 3 get countries'/>
+ <img src='./sunnyEvolutionImgs/routes4mod.png' alt='Js Ritas 4 get Activities'/>
+ <video width="320" height="240" controls>
+      <source src="./sunnyEvolutionImgs/routes2.mp4" type="video/mp4">
+      Tu navegador no soporta el elemento de video.
+    </video>
+  </li>
 </ul>

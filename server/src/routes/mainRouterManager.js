@@ -1,24 +1,22 @@
 const { Router } = require("express");
+const countriesGetRouter = require('./theGettersRoutes/countriesGetRouters.js')
+const activitiesGetRouter = require('./theGettersRoutes/activitiesGetRouter.js')
+const activitiesPostRouter = require('./thePostersRouters/activitiesPostRouter.js')
 const mainRouterManager = Router();
 
-mainRouterManager.get('/', (req, res)=> {
-  res.status(200).send('Llegue al endpoin get /');
-}); 
 
-mainRouterManager.get('/countries', (req, res)=> {
-  res.status(200).send('Llegue al endpoin get /countries');
-}); 
 
-mainRouterManager.get('/countries/:id', (req, res)=> {
-  res.status(200).send('Llegue al endpoin /countries de id');
-}); 
 
-mainRouterManager.get('/activities', (req, res)=> {
-  res.status(200).send('Llegue al endpoin get /activities');
-}); 
+mainRouterManager.use("/", countriesGetRouter) 
+mainRouterManager.use("/", activitiesGetRouter) 
+mainRouterManager.use("/", activitiesPostRouter) 
 
-mainRouterManager.post('/activities', (req, res)=> {
-  res.status(200).send('Llegue al endpoin /post de activities');
-}); 
+
 
 module.exports = mainRouterManager;
+
+/* 
+Este me trae las rutas segun lo que se pide. por ello se importan. 
+Concibo que con miras a poder evidenciar mejor los errores es mejor la modularización 
+y al saber que un err es especifico la modularización ayuda 
+*/
