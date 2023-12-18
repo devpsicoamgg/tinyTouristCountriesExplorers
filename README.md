@@ -7,6 +7,13 @@ Después de explorar numerosos ejemplos y reflexionar sobre el propósito de mi 
 Para esta se retomaron clases y se creó una guía técnica del desarrollo de la app donde se mostró el día a día y paso a paso. 
   <img src='./client/src/images/kidsCitiesTwo.png' alt='background img.' />
     </p>
-  
-       
-    </div>
+
+
+<details>
+    <summary>DIA 01.- 17/Dic/23 - <b> BackEnd</b> </summary>
+        <ul>
+        <li> Creación carpeta para imágenes del codeo diario y evolución / incluye videos.</li> 
+        <li> Verificación de la estructura del proyecto. Trae client y server. En server gran parte montado. <a href="./sunnyEvolutionImgs/apiFormat.png">Imagen de como viene la api</a>
+        </li> 
+         </ul>
+</details>
