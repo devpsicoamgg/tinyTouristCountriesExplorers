@@ -86,7 +86,7 @@ Para esta se retomaron clases y se creó una guía técnica del desarrollo de la
  <li> <details> <summary>Se configuran variables de entorno .env / dotenv()</summary> 
  <p> Se hace configuración inicial del .env y se crea en esta la variable de DB_NAME la cual se modifica en db.js. 
  </p>
- <img src='./sunnyEvolutionImgs/dbenvconfigura.png' alt='Variables de entornos'/>
+ <img src='./sunnyEvolutionImgs/dbenvconfigural.png' alt='Variables de entornos'/>
  <img src='./sunnyEvolutionImgs/dbenvconfigura2.png' alt='Modificación en base de datos'/>
  </li> 
 
