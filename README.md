@@ -9,7 +9,8 @@ Para esta se retomaron clases y se creó una guía técnica del desarrollo de la
     </p>
 
 <details>
-    <summary>DIA 01.- 17/Dic/23 - <b> BackEnd</b> </summary>
+    <summary> - <b> BackEnd</b> - </summary>
+        DÍA 1- 17-Dic-23
         <ul>
         <li> Creación carpeta para imágenes del codeo diario y evolución / incluye videos.</li> 
         <li> Verificación de la estructura del proyecto. Trae client y server. En server gran parte montado.</a>
@@ -101,3 +102,21 @@ Para esta se retomaron clases y se creó una guía técnica del desarrollo de la
  <img src='./sunnyEvolutionImgs/dbrenamedtheserver.png' alt='configurando nombre en bd'/>
  </li> 
          </ul>
+DIA 2. 18-Dic-23
+<ul> 
+<li> <details> <summary>Rebautizo del Server</summary> 
+ <p> Se rebautiza server según la lógica del negocio.  
+ </p>
+ <img src='./sunnyEvolutionImgs/reconfigurandoServer.png' alt='Renombrando el servidor'/>
+ <img src='./sunnyEvolutionImgs/reconfigurandoServer2.png' alt='configurando nombre en bd'/>
+ </li>
+ <li>Se empieza trabajando con rutas.</li>
+ <li>Se cambia la ruta del BackEnd por mainRouterManager y se cambia tanto en el server como .</li>
+<li> <details> <summary>Se empieza con rutas iniciales</summary> 
+ <img src='./sunnyEvolutionImgs/routes1.png' alt='Rutas'/>
+ <video width="320" height="240" controls>
+      <source src="./sunnyEvolutionImgs/routes2.mp4" type="video/mp4">
+      Tu navegador no soporta el elemento de video.
+    </video>
+  </li>
+</ul>

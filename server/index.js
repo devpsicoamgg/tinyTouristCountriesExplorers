@@ -8,7 +8,7 @@ Le traje el dotenv con un PORT_SERVER.
 require("dotenv").config();
 
 // const axios = require("axios");
-const server = require("./src/server");
+const server = require("./src/serverTinyTourist.js");
 const { tinyConnection } = require('./src/db.js');
 const { PORT_SERVER } = process.env
 
