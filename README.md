@@ -223,13 +223,110 @@ DÍA 2.- 18-Dic-23
     <ul>
         <li>Instalación de dotEnv para variables de entorno en front.</li>
         <li>Verificación de la estructura del front. Montado en vite.</li>
-  <li> <details> <summary>Modificación HTML principal</summary> 
-<p>Se Modifica el HTML para que tenga un favicono, description, etc. </p>
- <img src='./sunnyEvolutionImgs/frontModHtml.png' alt='HTML Modificado'/>
+        <li> <details> <summary>Modificación HTML principal</summary> 
+        <p>Se Modifica el HTML para que tenga un favicono, description, etc. </p>
+        <img src='./sunnyEvolutionImgs/frontModHtml.png' alt='HTML Modificado'/>
         <li>Se eliminan los estilos predeterminados del main eliminando index.css y su llamado en main</li>
         <li>Se modifica el estilado de CSS en app dejando fuentes predeterminadas y contenidos centrados</li>
         <li>Se reconfigura App.jsx limpiandolo para configurar en él el router</li>
 
+  <li> <details><summary> Se genera estructura de carpetas </summary>
+  <ul>
+    <li>components
+        <ul>
+            <li>CardCountryDetailPage
+                <ul>
+                    <li><strong>CardCountryDetailPage.jsx</strong></li>
+                    <li><strong>CardCountryDetailPage.module.css</strong></li>
+                </ul>
+            </li>
+            <li>CardCountryPresentation
+                <ul>
+                    <li><strong>CardCountryPresentation.jsx</strong></li>
+                    <li><strong>CardCountryPresentation.module.css</strong></li>
+                </ul>
+            </li>
+            <li>CardsCountries
+                <ul>
+                    <li><strong>CardsCountries.jsx</strong></li>
+                    <li><strong>CardsCountries.module.css</strong></li>
+                </ul>
+            </li>
+            <li>Error404
+                <ul>
+                    <li><strong>Error404.jsx</strong></li>
+                    <li><strong>Error404.module.css</strong></li>
+                </ul>
+            </li>
+            <li>FiltersAndOrders
+                <ul>
+                    <li>FilterByActivities
+                        <ul>
+                            <li><strong>FilterByActivities.jsx</strong></li>
+                            <li><strong>FilterByActivities.module.css</strong></li>
+                        </ul>
+                    </li>
+                    <li>FilterByContinent
+                        <ul>
+                            <li><strong>FilterByContinent.jsx</strong></li>
+                            <li><strong>FilterByContinent.module.css</strong></li>
+                        </ul>
+                    </li>
+                    <li>OrderByName
+                        <ul>
+                            <li><strong>OrderByName.jsx</strong></li>
+                            <li><strong>OrderByName.module.css</strong></li>
+                        </ul>
+                    </li>
+                    <li>OrderByPopulation
+                        <ul>
+                            <li><strong>OrderByPopulation.jsx</strong></li>
+                            <li><strong>OrderByPopulation.module.css</strong></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>FormActivityPage
+                <ul>
+                    <li><strong>FormActivityPage.jsx</strong></li>
+                    <li><strong>FormActivityPage.module.css</strong></li>
+                </ul>
+            </li>
+            <li>HomePage
+                <ul>
+                    <li><strong>HomePage.jsx</strong></li>
+                    <li><strong>HomePage.module.css</strong></li>
+                </ul>
+            </li>
+            <li>NavBar
+                <ul>
+                    <li><strong>NavBar.jsx</strong></li>
+                    <li><strong>NavBar.module.css</strong></li>
+                </ul>
+            </li>
+            <li>Pagination
+                <ul>
+                    <li><strong>Pagination.jsx</strong></li>
+                    <li><strong>Pagination.module.css</strong></li>
+                </ul>
+            </li>
+            <li>SearchBar
+                <ul>
+                    <li><strong>SearchBar.jsx</strong></li>
+                </ul>
+            </li>
+            <li>WellcomePage
+                <ul>
+                    <li><strong>WellcomePage.css</strong></li>
+                    <li><strong>WellcomePage.jsx</strong></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+</details>
+</li>
+<li> Uso de fragmentos para la optimización de la escritura del codigo </li>
   </li>
     </ul>
 
