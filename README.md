@@ -112,7 +112,7 @@ DIA 2. 18-Dic-23
  </li>
  <li>Se empieza trabajando con rutas.</li>
 
- <li>Se cambia la ruta del BackEnd por mainRouterManager y se cambia tanto en el server como .</li>
+ <li>Se cambia la ruta del BackEnd por mainRouterManager y se cambia tanto en el server como en la mainRouter .</li>
 <li> <details> <summary>Se empieza con rutas iniciales</summary> 
  <img src='./sunnyEvolutionImgs/routes1.png' alt='Rutas'/>
   </li>
@@ -150,15 +150,14 @@ DIA 2. 18-Dic-23
 </li>
 
   <li> <details> <summary>se verifican rutas por body en post</summary> 
- <li>Por body </li>
  <p>POST http://localhost:3001/activities</p>
- <code> {
-  "name": "Caminatas",
-  "difficulty": 2,
-  "duration": 1,
-  "season": "Autumn",
-  "description": "Ojo te roban",
-  "id": "COL"
+ <code> { </br>
+  "name": "Caminatas", </br>
+  "difficulty": 2, </br>
+  "duration": 1, </br>
+  "season": "Autumn", </br>
+  "description": "Ojo te roban",</br>
+  "id": "COL" </br>
 }</code>
  <img src='./sunnyEvolutionImgs/byBody1.png' alt='query'/>
  <li>Por params </li>
