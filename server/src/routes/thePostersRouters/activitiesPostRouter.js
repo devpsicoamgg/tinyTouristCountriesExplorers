@@ -1,10 +1,10 @@
 const { Router } = require("express");
 const activitiesPostRouter = Router();
-const {postActivitiesHandler} = require("../../handlers/thePostersHandlers/activitiesPostHandler.js")
+const {activitiesPostHandler} = require("../../handlers/thePostersHandlers/activitiesPostHandler")
 
 
 
-activitiesPostRouter.post('/', postActivitiesHandler); 
+activitiesPostRouter.post('/', activitiesPostHandler); 
 
 
 module.exports = activitiesPostRouter;
