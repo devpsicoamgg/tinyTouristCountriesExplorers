@@ -5,7 +5,7 @@ const { PORT_API_HOST, NAME_JSON_PORT_API, DB_HOST } = process.env;
 const axios = require("axios");
 
 // guardar datos de la API en la bd 
-const saveDataFromApiToDB = async () => {
+const saveDataControllerFromApiToDB = async () => {
   try {
     // Verifica si datos en la bd
     const existingDataCount = await Country.count();
@@ -54,4 +54,4 @@ const saveDataFromApiToDB = async () => {
 };
 
 // Exporta la función para su uso en otros archivos
-module.exports = { saveDataFromApiToDB };
+module.exports = { saveDataControllerFromApiToDB };
