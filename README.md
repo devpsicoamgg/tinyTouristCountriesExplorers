@@ -147,7 +147,23 @@ DIA 2. 18-Dic-23
  <li>Por params </li>
  <p>http://localhost:3001/countries/ACA</p>
  <img src='./sunnyEvolutionImgs/queryyparams2.png' alt='query'/>
+</li>
 
-  </li>
+  <li> <details> <summary>se verifican rutas por body en post</summary> 
+ <li>Por body </li>
+ <p>POST http://localhost:3001/activities</p>
+ <code> {
+  "name": "Caminatas",
+  "difficulty": 2,
+  "duration": 1,
+  "season": "Autumn",
+  "description": "Ojo te roban",
+  "id": "COL"
+}</code>
+ <img src='./sunnyEvolutionImgs/byBody1.png' alt='query'/>
+ <li>Por params </li>
+ <p>http://localhost:3001/countries/ACA</p>
+ <img src='./sunnyEvolutionImgs/bybodyjson2.png' alt='query'/>
+
 
 </ul>

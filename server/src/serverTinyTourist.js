@@ -12,10 +12,11 @@ const mainRouterManager = require("./routes/mainRouterManager");
 
 const serverTinyTourist = express();
 
-serverTinyTourist.use(morgan("dev"));
-serverTinyTourist.use(express.json());
-serverTinyTourist.use(cors());
-serverTinyTourist.use(mainRouterManager); //Rutas
+serverTinyTourist.use(morgan("dev")); // siempre de primeras y manda condigo status, solo en development enviro
+serverTinyTourist.use(cors()); // los headers y lios de ahi para lo relativo al post y pueda cambiar a lenguaje de
+serverTinyTourist.use(express.json()); //para mi después del cors por que cors tiene que ver con cabeceras, enseña a js a que lea json
+serverTinyTourist.use(mainRouterManager); // me traigo las rutas main
+
 
 module.exports = serverTinyTourist;
 /*
