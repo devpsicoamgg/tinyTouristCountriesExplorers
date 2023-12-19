@@ -15,7 +15,7 @@ const { PORT_SERVER } = process.env;
 const { saveDataControllerFromApiToDB } = require('./src/controllers/saveDataControllerFromApiToDB/saveDataControllerFromApiToDB.js')
 
 //este connection viene como obj que su key es connection y su valor toda la instancia de sequelize
-tinyConnection.sync({ force: true }).then(() => { //verificar lo del alter y false 
+tinyConnection.sync({ force: false }).then(() => { //verificar lo del alter y false 
 server.listen(PORT_SERVER, () => {
       //aca se invoca para que al levantarse el 3001 y el 5000 se almacene en BD los datos
       saveDataControllerFromApiToDB()
