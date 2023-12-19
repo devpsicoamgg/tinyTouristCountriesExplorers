@@ -1,3 +1,13 @@
+/*
+Esta es la data base.  
+se creo la DB al principio en el .env se dio el name de ella. 
+Al inicio no tablas creadas pero en este template de Henry ya venía toda la parte para buscar 
+los tables models que se creen en la carpeta Models. 
+No se han de instalar dependencias porque ya venían. 
+
+*/
+
+
 require("dotenv").config();
 const { Sequelize } = require("sequelize");
 
@@ -6,7 +16,7 @@ const path = require("path");
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
 
 const sequelize = new Sequelize(
-  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
+  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`, //se configuró segun name de db
   {
     logging: false,
     native: false,
@@ -41,5 +51,5 @@ const { Country } = sequelize.models;
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
-  tinyConnection: sequelize, // para importart la conexión { conn } = require('./db.js');
+  tinyConnection: sequelize, // para importart la conexión { conn } = require('./db.js'); //* ACA SE CAMBIO EL NOMBRE DE LA CONN
 };

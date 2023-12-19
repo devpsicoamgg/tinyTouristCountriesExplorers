@@ -3,6 +3,7 @@ INICIALIZA EL SERVIDOR.
 Se requiere y levanta la app 
 se declara el puerto de escucha activa por el listen. 
 Le traje el dotenv con un PORT_SERVER. 
+La comunicación entre server y db se da por el sync
 */
 
 require("dotenv").config();
