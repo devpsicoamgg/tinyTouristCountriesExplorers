@@ -6,8 +6,6 @@ los tables models que se creen en la carpeta Models.
 No se han de instalar dependencias porque ya venían. 
 
 */
-
-
 require("dotenv").config();
 const { Sequelize } = require("sequelize");
 
@@ -44,10 +42,17 @@ let capsEntries = entries.map((entry) => [
 ]);
 sequelize.models = Object.fromEntries(capsEntries);
 
-const { Country } = sequelize.models;
+const { Country, Activity } = sequelize.models;
 
-// Aca vendrian las relaciones
-// Product.hasMany(Reviews);
+/* Aca vendrían las relaciones:
+Activity(sequelize)
+Country(sequelize)*/
+
+//UNA CIUDAD O MUCHAS CIUDADES PUEDE TENR MUCHAS ACTIVIDADES
+Country.belongsToMany(Activity, { through: "country_activity" });
+// UNA ACTIVIDAD O MUCHAS PUEDEN ESTAR EN UNA O MUCHAS CIUDADES
+Activity.belongsToMany(Country, { through: "country_activity" });
+
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');

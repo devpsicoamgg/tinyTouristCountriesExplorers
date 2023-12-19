@@ -58,7 +58,6 @@ Para esta se retomaron clases y se creó una guía técnica del desarrollo de la
 </li>
 </li>
 
- 
 <li> <details> <summary> Verificación del packege.json identificando: a) axios, b) concurrently para 2 puertos al tiempo, c) cors, d) dotenv, e) express, f) json-server, g) morgan, h) nodemon, i) npm-run-all, j) pg, k) pg-hstore, l) sequelize. 
       </summary>
       <li> <img src='./sunnyEvolutionImgs/dependencies.png' alt='Imagen dependencias'/>  </li>
@@ -82,18 +81,18 @@ Para esta se retomaron clases y se creó una guía técnica del desarrollo de la
  <p> Se crea mediante CREATE DATABASE tinytouristcountriesexplorers;
  </p>
  <img src='./sunnyEvolutionImgs/bdcreation.png' alt='Variables de entornos'/>
- </li> 
+ </li>
 
  <li> <details> <summary>Se configuran variables de entorno .env / dotenv()</summary> 
  <p> Se hace configuración inicial del .env y se crea en esta la variable de DB_NAME la cual se modifica en db.js. 
  </p>
  <img src='./sunnyEvolutionImgs/dbenvconfigural.png' alt='Variables de entornos'/>
  <img src='./sunnyEvolutionImgs/dbenvconfigura2.png' alt='Modificación en base de datos'/>
- </li> 
+ </li>
 
  <li> <details> <summary>Se lanza npm start para verificar correcto funcionameinto </summary> 
  <img src='./sunnyEvolutionImgs/npmstart.png' alt='npm start'/>
- </li> 
+ </li>
 
   <li> <details> <summary>Se configura puerto y se da firma personal según el proyecto</summary> 
  <p> se modifican tanto como index como db.  
@@ -163,6 +162,45 @@ DIA 2. 18-Dic-23
  <li>Por params </li>
  <p>http://localhost:3001/countries/ACA</p>
  <img src='./sunnyEvolutionImgs/bybodyjson2.png' alt='query'/>
+</li>
 
+  <li> <details> <summary>Modelos</summary> 
+ <p>Se completa el modelo de Country </p>
+<ol>
+    <li><strong>id:</strong> Código único de tres letras que sirve como clave primaria y es obligatorio.</li>
+    <li><strong>name:</strong> Nombre único y obligatorio del país.</li>
+    <li><strong>officialname:</strong> Nombre oficial del país (opcional).</li>
+    <li><strong>flag:</strong> URL única y obligatoria de la imagen de la bandera, validada como URL.</li>
+    <li><strong>continent:</strong> Continente al que pertenece el país, obligatorio.</li>
+    <li><strong>capital:</strong> Capital del país, obligatoria.</li>
+    <li><strong>subregion:</strong> Subregión a la que pertenece el país (opcional).</li>
+    <li><strong>area:</strong> Área del país (opcional).</li>
+    <li><strong>maps:</strong> URL del mapa del país, opcional y validada como URL.</li>
+    <li><strong>population:</strong> Población del país (opcional).</li>
+    <li><strong>timezones:</strong> Zona horaria del país (opcional).</li>
+    <li><strong>coatOfArms:</strong> URL del escudo del país, opcional y validada como URL.</li>
+<li>La opción { timestamps: false } indica que no se incluirán marcas de tiempo de creación y actualización en la tabla.</li>
+</ol>
+
+ <p>Se crea el modelo de Activity => si se crea archivo vacio sin exportar rompe por la db como la tiene Henry</p>
+<ol>
+    <li><strong>id:</strong> ID NUMERICO UUID COMO PRIMARY KEY OBLIGA. clave primaria, no nula, y valor predeterminado generado automáticamente.</li>
+    <li><strong>name:</strong> NAME CON VALIDACIÓN DE NO PALABRAS. campo de cadena no permite palabras por validación notIn.</li>
+    <li> <strong>difficulty:</strong> DIFICULTAD CON VALIDACIÓN DE VALOR EN RANGO. campo numérico entero de 1 -5 validado</li>
+    <li><strong>duration:</strong> DURACIÓN. campo numérico entero.</li>
+    <li><strong>season:</strong> TEMPORADA. opciones "Summer", "Autumn", "Winter" "Spring".</li>
+    <li><strong>description:</strong> DESCRIPCIÓN PARRAFO EN TEXT. campo de texto para la descripción de la actividad.</li>
+    <li><strong>date_added:</strong> FECHA DE ADICIÓN A DB EN FORMATO MM/DD/AAAA. valor predeterminado con la de hoy.</li>
+    <li><strong>createdInDb:</strong> BOOLEANO DE SI CREADO EN DB Y UTIL CUANDO QUIERO CONSULTAR LLAMADO A API Y BD DIFERENTES COMO QUE APLICA MÁS PARA POKEMON.</li>
+    <li><strong>summary:</strong> CAMPO VIRTUAL DE CLASE AURI. NECESARIO? NO. SIRVE PARA NO ALMACENAR DIRECTAMENTE EN BD.</li>
+</ol>
+<li>El tercer argumento, si está presente, permite o impide la inclusión de marcas de tiempo de creación y actualización en la tabla. En este caso, se han incluido ({ timestamps: true }).</li>
+</li>
+<li> <details> <summary>Modelos y Relaciones</summary> 
+<p>En la carpeta modelos se montan cada uno en un archivo</p>
+ <img src='./sunnyEvolutionImgs/modelscreated.png' alt='Modelos'/>
+<p>En db se entablan las relaciones</p>
+ <img src='./sunnyEvolutionImgs/relations.png' alt='Relaciones'/>
+  </li>
 
 </ul>
