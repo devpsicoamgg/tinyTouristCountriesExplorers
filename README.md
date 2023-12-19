@@ -204,7 +204,8 @@ DÍA 2.- 18-Dic-23
 <p>En db se entablan las relaciones</p>
  <img src='./sunnyEvolutionImgs/relations.png' alt='Relaciones'/>
   </li>
-
+  </li>
+    
 <li> <details> <summary>Controladores</summary> 
 <p>Se crea estructura de archivos. </p>
  <img src='./sunnyEvolutionImgs/Modelo_ER.png' alt='Relaciones'/>
@@ -229,6 +230,7 @@ DÍA 2.- 18-Dic-23
         <li>Se eliminan los estilos predeterminados del main eliminando index.css y su llamado en main</li>
         <li>Se modifica el estilado de CSS en app dejando fuentes predeterminadas y contenidos centrados</li>
         <li>Se reconfigura App.jsx limpiandolo para configurar en él el router</li>
+</details>
 
   <li> <details><summary> Se genera estructura de carpetas </summary>
   <ul>
@@ -324,10 +326,8 @@ DÍA 2.- 18-Dic-23
         </ul>
     </li>
 </ul>
-</details>
 </li>
+
 <li> Uso de fragmentos para la optimización de la escritura del codigo </li>
-  </li>
-    </ul>
 
 </details>
