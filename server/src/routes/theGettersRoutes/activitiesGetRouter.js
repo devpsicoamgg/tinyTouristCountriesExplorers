@@ -1,10 +1,11 @@
-const { Router } = require("express");
+const { Router } = require('express');
+const { activitiesGetHandler } = require('../../handlers/theGettersHandlers/activitiesGetHandler')
 const activitiesGetRouter = Router();
-const { getActivitiesHandlerAll } = require('../../handlers/theGettersHandlers/getActivitiesHandler')
 
 
 
-activitiesGetRouter.get('/', getActivitiesHandlerAll); 
+activitiesGetRouter.get('/', activitiesGetHandler);
+
 
 
 module.exports = activitiesGetRouter;

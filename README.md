@@ -205,4 +205,13 @@ DIA 2. 18-Dic-23
  <img src='./sunnyEvolutionImgs/relations.png' alt='Relaciones'/>
   </li>
 
+<li> <details> <summary>Controladores</summary> 
+<p>Se crea estructura de archivos. </p>
+ <img src='./sunnyEvolutionImgs/Modelo_ER.png' alt='Relaciones'/>
+<p>En la carpeta modelos se montan cada uno en un archivo</p>
+ <img src='./sunnyEvolutionImgs/modelscreated.png' alt='Modelos'/>
+<p>En db se entablan las relaciones</p>
+ <img src='./sunnyEvolutionImgs/relations.png' alt='Relaciones'/>
+  </li>
+
 </ul>

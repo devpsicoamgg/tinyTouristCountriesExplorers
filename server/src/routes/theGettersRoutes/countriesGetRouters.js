@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const countriesGetRouter = Router();
-const { getCountriesHandler } = require('../../handlers/theGettersHandlers/getCountriesHandles')
+const { getCountriesHandler } = require('../../handlers/theGettersHandlers/countriesGetHandles')
 
 countriesGetRouter.get('/', getCountriesHandlerAll); 
 countriesGetRouter.get('/:id', getCountriesHandlerById); 

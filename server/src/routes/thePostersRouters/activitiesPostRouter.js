@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const activitiesPostRouter = Router();
-const {postActivitiesHandler} = require("../../handlers/thePostersHandlers/postActivitiesHandler.js")
+const {postActivitiesHandler} = require("../../handlers/thePostersHandlers/activitiesPostHandler.js")
 
 
 
