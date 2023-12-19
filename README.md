@@ -140,4 +140,14 @@ DIA 2. 18-Dic-23
  <img src='./sunnyEvolutionImgs/handlermod3.png' alt='Handlers 3'/>
   </li>
 
+  <li> <details> <summary>se verifican rutas por query y params</summary> 
+ <li>Por query </li>
+ <p>http://localhost:3001/countries?name=betto</p>
+ <img src='./sunnyEvolutionImgs/queryyparams.png' alt='query'/>
+ <li>Por params </li>
+ <p>http://localhost:3001/countries/ACA</p>
+ <img src='./sunnyEvolutionImgs/queryyparams2.png' alt='query'/>
+
+  </li>
+
 </ul>
