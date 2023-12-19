@@ -18,7 +18,7 @@ module.exports = (sequelize) => {
         allowNull: false,
         unique: false,
         validate: {
-          notIn: [["Popo", "Tirar", "Matar"]],
+          notIn: [["Popo", "Matar"]],
         },
       },
       //DIFICULTAD CON VALIDACIÓN DE VALOR EN RANGO

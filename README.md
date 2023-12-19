@@ -197,6 +197,8 @@ DIA 2. 18-Dic-23
 <li>El tercer argumento, si está presente, permite o impide la inclusión de marcas de tiempo de creación y actualización en la tabla. En este caso, se han incluido ({ timestamps: true }).</li>
 </li>
 <li> <details> <summary>Modelos y Relaciones</summary> 
+<p>El modelo ER</p>
+ <img src='./sunnyEvolutionImgs/Modelo_ER.png' alt='Relaciones'/>
 <p>En la carpeta modelos se montan cada uno en un archivo</p>
  <img src='./sunnyEvolutionImgs/modelscreated.png' alt='Modelos'/>
 <p>En db se entablan las relaciones</p>

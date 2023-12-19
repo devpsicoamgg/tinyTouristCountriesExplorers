@@ -14,7 +14,7 @@ const { tinyConnection } = require('./src/db.js');
 const { PORT_SERVER } = process.env
 
 //este connection viene como obj que su key es connection y su valor toda la instancia de sequelize
-tinyConnection.sync({ force: true }).then(() => {
+tinyConnection.sync({ force: true }).then(() => { //verificar lo del alter y false 
 server.listen(PORT_SERVER, () => {
   console.log(`Server is listening in the tinyPort |-> ${PORT_SERVER} <-|`);
 })
