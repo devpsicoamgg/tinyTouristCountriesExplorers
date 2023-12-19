@@ -15,8 +15,7 @@ const serverTinyTourist = express();
 serverTinyTourist.use(morgan("dev"));
 serverTinyTourist.use(express.json());
 serverTinyTourist.use(cors());
-
-serverTinyTourist.use(mainRouterManager);
+serverTinyTourist.use(mainRouterManager); //Rutas
 
 module.exports = serverTinyTourist;
 /*

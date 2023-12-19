@@ -1,10 +1,10 @@
 const { Router } = require("express");
 const activitiesPostRouter = Router();
+const {postActivitiesHandler} = require("../../handlers/thePostersHandlers/postActivitiesHandler.js")
 
 
-activitiesPostRouter.post('/activities', (req, res)=> {
-  res.status(200).send('Llegue al endpoin /post de activities que posteará todas las activities pero MODULARIZADO');
-}); 
+
+activitiesPostRouter.post('/', postActivitiesHandler); 
 
 
 module.exports = activitiesPostRouter;

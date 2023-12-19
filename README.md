@@ -111,13 +111,10 @@ DIA 2. 18-Dic-23
  <img src='./sunnyEvolutionImgs/reconfigurandoServer2.png' alt='configurando nombre en bd'/>
  </li>
  <li>Se empieza trabajando con rutas.</li>
+
  <li>Se cambia la ruta del BackEnd por mainRouterManager y se cambia tanto en el server como .</li>
 <li> <details> <summary>Se empieza con rutas iniciales</summary> 
  <img src='./sunnyEvolutionImgs/routes1.png' alt='Rutas'/>
- <video width="320" height="240" controls>
-      <source src="./sunnyEvolutionImgs/routes2.mp4" type="video/mp4">
-      Tu navegador no soporta el elemento de video.
-    </video>
   </li>
 
   <li> <details> <summary>Se modularizan rutas tanto del get como del post.  </summary> 
@@ -128,9 +125,19 @@ DIA 2. 18-Dic-23
  <img src='./sunnyEvolutionImgs/routes2mod.png' alt='Js Rutas 2 post Activities'/>
  <img src='./sunnyEvolutionImgs/routes3mod.png' alt='Js Rutas 3 get countries'/>
  <img src='./sunnyEvolutionImgs/routes4mod.png' alt='Js Ritas 4 get Activities'/>
- <video width="320" height="240" controls>
-      <source src="./sunnyEvolutionImgs/routes2.mp4" type="video/mp4">
-      Tu navegador no soporta el elemento de video.
-    </video>
   </li>
+
+<li> <details> <summary>Modularización de handlers</summary> 
+ <img src='./sunnyEvolutionImgs/handler1.png' alt='Handlers 1 '/>
+ <img src='./sunnyEvolutionImgs/handler2.png' alt='handlers 2'/>
+ <img src='./sunnyEvolutionImgs/handler3.png' alt='Handlers 3'/>
+  </li>
+
+<li> <details> <summary>Exportación de handlers</summary> 
+ <img src='./sunnyEvolutionImgs/carpetahandlers.png' alt='Folder'/>
+ <img src='./sunnyEvolutionImgs/handlermod1.png' alt='handlers 1'/>
+ <img src='./sunnyEvolutionImgs/handlermod2.png' alt='Handlers 2'/>
+ <img src='./sunnyEvolutionImgs/handlermod3.png' alt='Handlers 3'/>
+  </li>
+
 </ul>

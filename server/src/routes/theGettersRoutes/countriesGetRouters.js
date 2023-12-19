@@ -1,15 +1,9 @@
 const { Router } = require("express");
 const countriesGetRouter = Router();
+const { getCountriesHandler } = require('../../handlers/theGettersHandlers/getCountriesHandles')
 
-
-countriesGetRouter.get('/countries', (req, res)=> {
-  res.status(200).send('Llegue al endpoin get / MODULARIZADO 1 que traerá todos los paises');
-}); 
-
-
-countriesGetRouter.get('/countries/:id', (req, res)=> {
-  res.status(200).send('Llegue al endpoin /countries de id MODULARIZADO 3 con id y esto es lo que se envio');
-}); 
+countriesGetRouter.get('/', getCountriesHandlerAll); 
+countriesGetRouter.get('/:id', getCountriesHandlerById); 
 
 
 module.exports = countriesGetRouter;

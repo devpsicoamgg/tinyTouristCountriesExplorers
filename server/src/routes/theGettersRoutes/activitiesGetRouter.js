@@ -1,10 +1,10 @@
 const { Router } = require("express");
 const activitiesGetRouter = Router();
+const { getActivitiesHandlerAll } = require('../../handlers/theGettersHandlers/getActivitiesHandler')
 
 
-activitiesGetRouter.get('/activities', (req, res)=> {
-  res.status(200).send('Llegue al endpoin get /activities para obtener todas las activities pero modularizado');
-}); 
+
+activitiesGetRouter.get('/', getActivitiesHandlerAll); 
 
 
 module.exports = activitiesGetRouter;
