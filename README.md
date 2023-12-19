@@ -327,7 +327,8 @@ DÍA 2.- 18-Dic-23
     </li>
 </ul>
 </li>
-
-<li> Uso de fragmentos para la optimización de la escritura del codigo </li>
+<li> <details> <summary>Uso de fragmentos para optimización del codigo</summary> 
+ <img src='./sunnyEvolutionImgs/fragmentos.gif' alt='Fragmentos'/>
+  </li>
 
 </details>
