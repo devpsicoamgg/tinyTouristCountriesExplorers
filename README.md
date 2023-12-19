@@ -9,8 +9,8 @@ Para esta se retomaron clases y se creó una guía técnica del desarrollo de la
     </p>
 
 <details>
-    <summary> - <b> BackEnd</b> - </summary>
-        DÍA 1- 17-Dic-23
+        <summary style="font-weight: bold; color: blue;"> - <b> BackEnd</b> - </summary>
+        DÍA 1.- 17-Dic-23
         <ul>
         <li> Creación carpeta para imágenes del codeo diario y evolución / incluye videos.</li> 
         <li> Verificación de la estructura del proyecto. Trae client y server. En server gran parte montado.</a>
@@ -101,7 +101,7 @@ Para esta se retomaron clases y se creó una guía técnica del desarrollo de la
  <img src='./sunnyEvolutionImgs/dbrenamedtheserver.png' alt='configurando nombre en bd'/>
  </li> 
          </ul>
-DIA 2. 18-Dic-23
+DÍA 2.- 18-Dic-23
 <ul> 
 <li> <details> <summary>Rebautizo del Server</summary> 
  <p> Se rebautiza server según la lógica del negocio.  
@@ -213,5 +213,21 @@ DIA 2. 18-Dic-23
 <p>En db se entablan las relaciones</p>
  <img src='./sunnyEvolutionImgs/relations.png' alt='Relaciones'/>
   </li>
-
 </ul>
+</details>
+---
+
+<details>
+    <summary style="font-weight: bold; color: red;"> - <b> FrontEnd</b> - </summary>
+       DÍA 3.- 19-Dic-23
+    <ul>
+        <li>Instalación de dotEnv para variables de entorno en front.</li>
+        <li>Verificación de la estructura del front. Montado en vite.</li>
+  <li> <details> <summary>Modificación HTML principal</summary> 
+<p>Se Modifica el HTML para que tenga un favicono, description, etc. </p>
+ <img src='./sunnyEvolutionImgs/frontModHtml.png' alt='HTML Modificado'/>
+
+  </li>
+    </ul>
+
+</details>
