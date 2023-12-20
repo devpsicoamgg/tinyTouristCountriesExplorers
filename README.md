@@ -331,8 +331,19 @@ DÍA 2.- 18-Dic-23
         <li>Se reconfigura App.jsx limpiándolo para configurar en él el router</li>
 </ul>
      <p>DIA 4.- 20/Dic/23</p>
+    <ul> 
             <details>
                 <summary>Structura Json </summary>
                 <p>Estructira del JSON .</p>
                 <img src='./sunnyEvolutionImgs/JSONDELCLIENTE.png' alt='jSON DEL CLIENTE' />
-            </details> </li>
+            </details> 
+                <details>
+                <summary>React Router Dom </summary>
+                <p>Abraza el main </p>
+                <img src='./sunnyEvolutionImgs/router1.png' alt='jSON DEL CLIENTE' />
+                <p>Abraza el app</p>
+                <img src='./sunnyEvolutionImgs/router2.png' alt='jSON DEL CLIENTE' />
+            </details> 
+            </ul>
+            </li>
+

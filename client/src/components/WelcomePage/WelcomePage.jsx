@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import styles from "./WelcomePage.module.css";
+import ROUTES from "../../helpers/RoutesHelper";
 import IMGWELCOME from "../../images/girlBusShowing.png";
 
 const WelcomePage = () => {
   return (
-    
     <>
       <div className={styles.containerWelcomePage}>
         <img
@@ -23,13 +24,13 @@ const WelcomePage = () => {
             Join me by clicking the button below and let's embark on this
             amazing journey together!
           </p>
-             <button>Click Me</button>
-          
+          <Link to={ROUTES.HOME}>
+            <button>Click Me</button>
+          </Link>
         </div>
       </div>
     </>
   );
 };
-
 
 export default WelcomePage;
