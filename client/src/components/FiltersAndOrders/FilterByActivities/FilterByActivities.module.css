@@ -1,0 +1,22 @@
+
+
+.containerFilterByActivities {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -10px;
+  
+}
+
+.selectByActivity {
+  font-family: 'Comic Sans MS', cursive, sans-serif; 
+  padding: 8px;
+  font-size: 16px;
+  border: 5px solid #ff3c00;
+  border-radius: 55px;
+  color: rgb(0, 0, 0);
+  background-color: #00ff1a;
+  margin-left: 10px;
+  cursor: pointer;
+}
+

@@ -1,0 +1,54 @@
+body {
+  width: 100vw; 
+  height: 100vh;
+  margin: 0;
+}
+
+.containerFormActivityPage {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100vw; 
+  height: 100vh;
+  background: linear-gradient(to right, #8e44ad,  #3498db);
+  padding: 20px;
+}
+
+.imgContainer {
+  max-width: 50%;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+img {
+  width: 90%;
+}
+
+.formContainer {
+  background: rgba(0, 0, 0, 0.397);
+  margin: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  margin-right: 160px;
+  border-radius: 10px;
+  padding: 20px; 
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  flex: 1;
+}
+
+.homeLink p {
+  color: black;
+  margin-top: -100px;
+  z-index: 1;
+  font-weight: bold; 
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  padding: 10px; /* Puedes ajustar el padding según tus preferencias */
+  border: 1px solid #ccc; /* Añade un borde para mayor claridad */
+  border-radius: 5px; /* Añade bordes redondeados */
+  box-sizing: border-box;
+}

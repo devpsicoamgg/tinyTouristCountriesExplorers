@@ -1,13 +1,19 @@
+
 import styles from "./Pagination.module.css";
 
-
 const Pagination = () => {
+
   return (
-    <>
-      <div className={styles.containerPagination}>
-         👋🏽👋🏽👋🏽 Hola, soy el componente llamado Pagination
-      </div>
-    </>
+    <div className={styles.containerPagination}>
+      <button >
+        Prev
+      </button>
+      <span>
+      </span>
+      <button >
+        Next
+      </button>
+    </div>
   );
 };
 

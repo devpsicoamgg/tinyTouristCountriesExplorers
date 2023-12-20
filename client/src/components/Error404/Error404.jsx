@@ -1,13 +1,15 @@
 import styles from "./Error404.module.css";
 
 
+
 const Error404 = () => {
   return (
-    <>
-      <div className={styles.containerError404}>
-         👋🏽👋🏽👋🏽 Hola, soy el componente llamado Error404
-      </div>
-    </>
+    <div className={styles.containerError404Page}>
+      <p className={styles.errorText}>
+        Oopsie-daisy!
+        <br /> Error 404
+      </p>
+    </div>
   );
 };
 

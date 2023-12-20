@@ -1,0 +1,28 @@
+.containerPagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerPagination button {
+  font-size: 16px;
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  background-color: black;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.containerPagination button:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.containerPagination span {
+  font-size: 18px;
+  margin: 0 10px;
+}

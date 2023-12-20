@@ -1,0 +1,13 @@
+
+
+.containerCardsCountries {
+  display: grid;
+  width: 95vw; 
+  max-height: 65vh; 
+  margin: 5px auto; 
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center; 
+  justify-content: center;
+  overflow: auto;
+
+}

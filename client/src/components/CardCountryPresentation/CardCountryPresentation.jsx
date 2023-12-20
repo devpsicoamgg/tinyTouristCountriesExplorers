@@ -1,14 +1,25 @@
 import styles from "./CardCountryPresentation.module.css";
 
+function CardCountryPresentation() {
+  ;
 
-const CardCountryPresentation = () => {
   return (
-    <>
-      <div className={styles.containerCardCountryPresentation}>
-         👋🏽👋🏽👋🏽 Hola, soy el componente llamado CardCountryPresentation
+    <div className={styles.containerCardCountryPresentation}>
+      <div className={styles.titleContainer}>
+        <p>
+        </p>
+        
       </div>
-    </>
+      <div className={styles.flagContainer}>
+       
+      </div>
+      <div className={styles.linkContainer}>
+        
+          <button >🔎more...</button>
+        
+      </div>
+    </div>
   );
-};
+}
 
 export default CardCountryPresentation;

@@ -1,0 +1,45 @@
+
+.containerNavBarMain {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-top: -25px;
+}
+
+
+
+.containerNavBarFirstOne {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.containerNavBarFirstOne img {
+  max-width: 10%;
+  height: auto;
+  transition: transform 0.3s ease;
+  z-index: 1; 
+}
+
+.containerNavBarFirstOne img:hover {
+  transform: scale(2.3) translate(25px, 20px) rotate(-25deg); 
+
+}
+
+.containerNavBarFirstOne a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+
+.containerNavBarSecondOne {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: -15px;
+}
