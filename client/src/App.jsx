@@ -20,20 +20,7 @@ function App() {
   return (
     <>
       <div>
-        <CardCountryDetailPage />
-        <CardCountryPresentation />
-        <CardsCountries />
-        <Error404 />
-        <FilterByActivities />
-        <FilterByContinent />
-        <OrderByName />
-        <OrderByPopulation />
-        <FormActivityPage/>
-        <HomePage />
-        <NavBar />
-        <Pagination />
-        <SearchBar />
-        <WelcomePage />
+ 
       </div>
     </>
   );

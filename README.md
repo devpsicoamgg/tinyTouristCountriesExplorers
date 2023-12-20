@@ -220,19 +220,18 @@ DÍA 2.- 18-Dic-23
 
 <details>
     <summary style="font-weight: bold; color: red;"> - <b> FrontEnd</b> - </summary>
-       DÍA 3.- 19-Dic-23
+    <p>DÍA 3.- 19-Dic-23</p>
     <ul>
         <li>Instalación de dotEnv para variables de entorno en front.</li>
         <li>Verificación de la estructura del front. Montado en vite.</li>
-        <li> <details> <summary>Modificación HTML principal</summary> 
-        <p>Se Modifica el HTML para que tenga un favicono, description, etc. </p>
-        <img src='./sunnyEvolutionImgs/frontModHtml.png' alt='HTML Modificado'/>
-        <li>Se eliminan los estilos predeterminados del main eliminando index.css y su llamado en main</li>
-        <li>Se modifica el estilado de CSS en app dejando fuentes predeterminadas y contenidos centrados</li>
-        <li>Se reconfigura App.jsx limpiandolo para configurar en él el router</li>
-</details>
-
-  <li> <details><summary> Se genera estructura de carpetas </summary>
+        <li>
+            <details>
+                <summary>Modificación HTML principal</summary>
+                <p>Se Modifica el HTML para que tenga un favicono, description, etc.</p>
+                <img src='./sunnyEvolutionImgs/frontModHtml.png' alt='HTML Modificado' />
+            </details> </li>
+            
+<li> <details><summary> Se genera estructura de carpetas </summary>
   <ul>
     <li>components
         <ul>
@@ -327,8 +326,13 @@ DÍA 2.- 18-Dic-23
     </li>
 </ul>
 </li>
-<li> <details> <summary>Uso de fragmentos para optimización del codigo</summary> 
- <img src='./sunnyEvolutionImgs/fragmentos.gif' alt='Fragmentos'/>
-  </li>
-
-</details>
+        <li>Se eliminan los estilos predeterminados del main eliminando index.css y su llamado en main</li>
+        <li>Se modifica el estilado de CSS en app dejando fuentes predeterminadas y contenidos centrados</li>
+        <li>Se reconfigura App.jsx limpiándolo para configurar en él el router</li>
+</ul>
+     <p>DIA 4.- 20/Dic/23</p>
+            <details>
+                <summary>Structura Json </summary>
+                <p>Estructira del JSON .</p>
+                <img src='./sunnyEvolutionImgs/JSONDELCLIENTE.png' alt='jSON DEL CLIENTE' />
+            </details> </li>
