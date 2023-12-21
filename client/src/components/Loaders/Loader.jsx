@@ -9,8 +9,9 @@ const Loader = () => {
         <span className={styles["right-front"]}></span>
       </div>
       <span className={`${styles.sun} ${styles.sunshine}`}></span>
-      <span className={styles.sun}></span>
-      <div className={`${styles.cloud} ${styles.back}`}>
+      <span className={styles.sun}></span> 
+      <div className={`${styles.cloud} ${styles.back}`}> 
+      <p className={styles.message}>Hang on a sec, we're on the lookout! 🕵️‍♂️</p>
         <span className={styles["left-back"]}></span>
         <span className={styles["right-back"]}></span>
       </div>

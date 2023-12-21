@@ -347,10 +347,14 @@ DÍA 2.- 18-Dic-23
 
  <details>
                 <summary>Integración Loader </summary>
-            <p><a href="https://uiverse.io/zanina-yassine/weak-bobcat-68">https://uiverse.io/zanina-yassine/weak-bobcat-68</a>  se copia el html y se modifican las clases y se copia el css para posibles conditional renderes/p>
-
-              
+            <p><a href="https://uiverse.io/zanina-yassine/weak-bobcat-68">https://uiverse.io/zanina-yassine/weak-bobcat-68</a>  se copia el html y se modifican las clases y se copia el css para posibles conditional renderes</p>              
 </details> 
+
+ <details>
+                <summary>Inicio redux</summary>
+            <p>Se da inicio al manejo de una única verdad con redux, así las cosas se crea estructura de archivos <p>              
+</details> 
+
             </ul>
             </li>
 

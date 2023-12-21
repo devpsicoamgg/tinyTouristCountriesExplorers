@@ -81,6 +81,13 @@
   animation: sunshines 2s infinite;
 }
 
+.message {
+  background-color: rgba(11, 231, 220, 0.38);
+  border-radius: 14%;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1), 0 8px 16px rgba(0, 0, 0, 1);
+}
+
 @keyframes sunshines {
   0% {
     transform: scale(1);
