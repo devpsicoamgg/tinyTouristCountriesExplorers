@@ -1,11 +1,11 @@
-import styles from "./CardsCountries.module.css";
 import React from "react";
+import styles from "./CardsCountries.module.css";
 import CardCountryPresentation from "../CardCountryPresentation/CardCountryPresentation";
 import Loader from "../Loaders/Loader";
 
-const CardsCountries = ({ allCountries, currentPage, PageToBeChange }) => {
+const CardsCountries = ({ allCountries, currentPage }) => {
   if (allCountries.length === 0) {
-    return <Loader className={styles.loader}  />;
+    return <Loader className={styles.loader} />;
   }
 
   const startIndex = (currentPage - 1) * 10;

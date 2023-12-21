@@ -362,6 +362,9 @@ DÍA 2.- 18-Dic-23
                 <summary>Pagination</summary>
             <p>se establece sistema de paginado<p>              
 </details> 
+            <summary>Get Detail Country</summary>
+            <p>Se obtiene el detalle del pais<p>              
+</details> 
             </ul>
             </li>
 
