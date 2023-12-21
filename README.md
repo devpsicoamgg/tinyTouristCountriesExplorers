@@ -358,6 +358,10 @@ DÍA 2.- 18-Dic-23
                 <summary>Integración de loaders</summary>
             <p>Pendiente mirar lo de css<p>              
 </details> 
+ <details>
+                <summary>Pagination</summary>
+            <p>se establece sistema de paginado<p>              
+</details> 
             </ul>
             </li>
 
