@@ -4,7 +4,7 @@ import CardCountryPresentation from "../CardCountryPresentation/CardCountryPrese
 import Loader from "../Loaders/Loader";
 
 const CardsCountries = ({ allCountries }) => {
-  if (allCountries.length !== 0) {
+  if (allCountries.length === 0) {
     return <Loader className={styles.loader}  />;
   }
 
