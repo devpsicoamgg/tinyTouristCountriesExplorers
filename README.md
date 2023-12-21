@@ -354,7 +354,10 @@ DÍA 2.- 18-Dic-23
                 <summary>Inicio redux</summary>
             <p>Se da inicio al manejo de una única verdad con redux, así las cosas se crea estructura de archivos <p>              
 </details> 
-
+ <details>
+                <summary>Integración de loaders</summary>
+            <p>Pendiente mirar lo de css<p>              
+</details> 
             </ul>
             </li>
 

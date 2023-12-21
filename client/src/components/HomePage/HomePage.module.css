@@ -15,11 +15,13 @@
 
 .navBar {
   flex: 0;
+  margin-bottom: 16px; 
 }
 
 .cardsCountries {
-  flex: 1;
+  flex: 0;
   overflow-y: auto;
+  margin-top: 16px;
 }
 
 .pagination {

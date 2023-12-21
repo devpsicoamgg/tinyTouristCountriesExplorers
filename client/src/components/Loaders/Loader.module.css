@@ -5,6 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(102, 0, 146, 0.776);
+  border-radius: 35%;
 }
 
 .cloud {
