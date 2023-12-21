@@ -13,7 +13,6 @@ const initialState = {
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_ALL_COUNTRIES:
-      console.log(action.payload);
       return {
         ...state,
         allCountries: action.payload,

@@ -4,6 +4,8 @@ import ROUTES from "../../helpers/RoutesHelper";
 import IMGWELCOME from "../../images/girlBusShowing.png";
 
 const WelcomePage = () => {
+
+
   return (
     <>
       <div className={styles.containerWelcomePage}>

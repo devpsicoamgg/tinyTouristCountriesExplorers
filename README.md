@@ -365,6 +365,10 @@ DÍA 2.- 18-Dic-23
             <summary>Get Detail Country</summary>
             <p>Se obtiene el detalle del pais<p>              
 </details> 
+</details> 
+            <summary>Se elimina dotenv</summary>
+            <p>Solo para el back <p>              
+</details> 
             </ul>
             </li>
 
