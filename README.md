@@ -344,6 +344,13 @@ DÍA 2.- 18-Dic-23
                 <p>Abraza el app</p>
                 <img src='./sunnyEvolutionImgs/router2.png' alt='jSON DEL CLIENTE' />
             </details> 
+
+ <details>
+                <summary>Integración Loader </summary>
+            <p><a href="https://uiverse.io/zanina-yassine/weak-bobcat-68">https://uiverse.io/zanina-yassine/weak-bobcat-68</a>  se copia el html y se modifican las clases y se copia el css para posibles conditional renderes/p>
+
+              
+</details> 
             </ul>
             </li>
 
