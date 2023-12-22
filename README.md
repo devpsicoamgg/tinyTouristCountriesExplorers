@@ -343,32 +343,88 @@ DÍA 2.- 18-Dic-23
                 <img src='./sunnyEvolutionImgs/router1.png' alt='jSON DEL CLIENTE' />
                 <p>Abraza el app</p>
                 <img src='./sunnyEvolutionImgs/router2.png' alt='jSON DEL CLIENTE' />
-            </details> 
+            </details>
 
  <details>
                 <summary>Integración Loader </summary>
             <p><a href="https://uiverse.io/zanina-yassine/weak-bobcat-68">https://uiverse.io/zanina-yassine/weak-bobcat-68</a>  se copia el html y se modifican las clases y se copia el css para posibles conditional renderes</p>              
-</details> 
+</details>
 
  <details>
                 <summary>Inicio redux</summary>
             <p>Se da inicio al manejo de una única verdad con redux, así las cosas se crea estructura de archivos <p>              
-</details> 
+</details>
+
  <details>
                 <summary>Integración de loaders</summary>
             <p>Pendiente mirar lo de css<p>              
-</details> 
- <details>
+</details>
+
+<details>
                 <summary>Pagination</summary>
             <p>se establece sistema de paginado<p>              
-</details> 
+</details>
+
+<details> 
             <summary>Get Detail Country</summary>
             <p>Se obtiene el detalle del pais<p>              
-</details> 
-</details> 
+</details>
+
+<details> 
             <summary>Se elimina dotenv</summary>
             <p>Solo para el back <p>              
-</details> 
+</details>
             </ul>
-            </li>
 
+<p> DIA 5.- 22/Dic/23</p>
+<ul> 
+<details> 
+            <summary>Se trabaja solamente en search byString para buscar por nombre, el flujo </summary>
+<ul>
+   <ul>
+    <li>
+      <code>HomePage</code> se monta y ejecuta el <code>useEffect</code>.
+    </li>
+    <li>Se despacha <code>getAllCountries</code> para obtener la lista completa de países.</li>
+  </ul>
+
+  <li>Busqueda países nombre:</li>
+  <ul>
+    <li>El cliente escribe en el input del <code>SearchBar</code> y <code>handleChange</code> toma los cambios actualizando el estado local <code>searchByString</code> </li>
+    </ul>
+
+  <li>Envío del formulario de búsqueda:</li>
+  <ul>
+    <li>El usuario da clic botón "Buscar" en <code>SearchBar</code>.</li>
+    <li>
+      <code>handleSubmit</code> en <code>SearchBar</code> se ejecuta.
+    </li>
+    <li>
+      <code>getCountryByName</code> se despacha con el valor que se escribio en <code>searchByString</code>.
+    </li>
+  </ul>
+
+  <li>Dispatch de la acción <code>getCountryByName</code>:</li>
+  <ul>
+    <li>
+      <code>getCountryByName</code> en <code>actions.js</code> realiza una solicitud a la API para obtener los países filtrados por nombre.
+    </li>
+    <li>La respuesta se envía al reducer con la acción <code>GET_COUNTRY_BY_NAME</code>.</li>
+  </ul>
+
+  <li>Actualización del estado por el reducer</li>
+  <ul>
+    <li>El (<code>reducer.js</code>) maneja la acción <code>GET_COUNTRY_BY_NAME</code>.</li>
+    <li>El estado de <code>allCountries</code> se actualiza con la lista de países filtrados.</li>
+  </ul>
+
+  <li>Renderización de componentes actualizados:</li>
+  <ul>
+    <li><code>HomePage</code> se vuelve a renderizar por el camvbio de estado de <code>allCountries</code>.</li>
+    <li><code>CardsCountries</code> muestra la lista actualizada de países según la búsqueda.</li>
+    <li><code>Pagination</code> refleja los cambios del estado global.</li>
+  </ul>
+</ul>
+</details> 
+            </li>
+            </ul>

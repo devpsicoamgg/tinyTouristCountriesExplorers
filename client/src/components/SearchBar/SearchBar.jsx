@@ -1,15 +1,15 @@
 import styles from "./SearchBar.module.css";
 
+//recibe las f() de busqeda y captura los eventos el input para llamar a handleChange para actaualizar stringsearch
 
-
-const SearchBar = () => {
+const SearchBar = ({ handleChange, handleSubmit }) => {
   return (
     <div className={styles.containerSearchBar}>
-      <form >
+      <form onSubmit={(event) => handleSubmit(event)}>
         <input
           type="text"
           placeholder="🔎 search for a country"
-          
+          onChange={(event) => handleChange(event)}
         />
         <button type="submit">Buscar</button>
       </form>

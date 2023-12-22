@@ -2,7 +2,11 @@
 REDUCER PERTENECE AL STORE, PERO ÉL ES QUIEN TIENE EL ESTADO
 */
 
-import { GET_ALL_COUNTRIES, GET_DETAIL_COUNTRY } from "../actions/actionTypes";
+import {
+  GET_ALL_COUNTRIES,
+  GET_DETAIL_COUNTRY,
+  GET_COUNTRY_BY_NAME,
+} from "../actions/actionTypes";
 
 const initialState = {
   allCountries: [],
@@ -21,6 +25,9 @@ export const reducer = (state = initialState, action) => {
 
     case GET_DETAIL_COUNTRY:
       return { ...state, detailCountry: action.payload };
+
+    case GET_COUNTRY_BY_NAME:
+      return { ...state, allCountries: action.payload };
 
     default:
       return { ...state };

@@ -5,21 +5,20 @@ import SearchBar from "../SearchBar/SearchBar";
 import styles from "./NavBar.module.css";
 import TITLE from "../../images/titleMain.png";
 
-const NavBar = () => {
+//f() de search del input un simple pasamanos en navBar 
+
+const NavBar = ({ handleChange, handleSubmit }) => {
   return (
     <>
       <div className={styles.containerNavBarMain}>
         <span className={styles.containerNavBarFirstOne}>
-          
-            <img src={TITLE} className={styles.titleMain} alt="Title" />
-          
-          <SearchBar />
+          <img src={TITLE} className={styles.titleMain} alt="Title" />
+
+          <SearchBar handleChange={handleChange} handleSubmit={handleSubmit} />
           <Link to={ROUTES.ACTIVITIES_POST}>👨🏽‍🎨👩🏽‍🎨</Link>
         </span>
 
-        <div className={styles.containerNavBarSecondOne}>
-
-        </div>
+        <div className={styles.containerNavBarSecondOne}></div>
       </div>
     </>
   );
