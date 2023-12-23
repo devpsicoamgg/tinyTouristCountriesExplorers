@@ -3,7 +3,7 @@ import styles from "./CardsCountries.module.css";
 import CardCountryPresentation from "../CardCountryPresentation/CardCountryPresentation";
 import Loader from "../Loaders/Loader";
 
-const CardsCountries = ({ allCountries, currentPage }) => {
+const CardsCountries = ({ allCountries, currentPage, selectedActivity, countriesPerPage }) => {
   if (allCountries.length === 0) {
     return <Loader className={styles.loader} />;
   }
@@ -12,16 +12,24 @@ const CardsCountries = ({ allCountries, currentPage }) => {
     //   window.alert(
     //    "No way, any country called" + allCountries
     //  );
-    return (
-      <p className={styles.pErrorBack}>
-        {allCountries} 😕 So sorry !!!
-      </p>
-    );
+    return <p className={styles.pErrorBack}>{allCountries} 😕 So sorry !!!</p>;
   }
 
-  const startIndex = (currentPage - 1) * 10;
-  const endIndex = startIndex + 10;
-  const countriesToBeShown = allCountries.slice(startIndex, endIndex);
+  const startIndex = (currentPage - 1) * countriesPerPage;
+  const endIndex = startIndex + countriesPerPage;
+
+
+const countriesToBeShown = allCountries
+  .filter(
+    (country) =>
+      !selectedActivity ||
+      (country.Activities &&
+        country.Activities.some(
+          (activity) => activity.name.toLowerCase() === selectedActivity.toLowerCase()
+        ))
+  )
+  .slice(startIndex, endIndex);
+
 
   return (
     <div className={styles.containerCardsCountries}>

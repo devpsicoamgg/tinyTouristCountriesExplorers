@@ -17,7 +17,10 @@ const HomePage = () => {
   const dispatch = useDispatch();
   const allCountries = useSelector((state) => state.allCountries);
   const continentList = useSelector((state) => state.continentList);
+  const countriesPerPage = 10; 
 
+
+  const [selectedActivity, setSelectedActivity] = useState("");
   const [searchByString, setSearchByString] = useState("");
   const [page, setPage] = useState(1);
 
@@ -43,6 +46,10 @@ const HomePage = () => {
     setPage(1);
   };
 
+  const handleActivityChange = (selectedActivity) => {
+    setSelectedActivity(selectedActivity);
+  };
+
   //se despacha la acción x useEffect getAll en el didMount
   useEffect(() => {
     dispatch(getAllCountries());
@@ -50,13 +57,14 @@ const HomePage = () => {
     dispatch(getActivities());
   }, [dispatch]);
 
+
+
   const PageToBeChange = (newPage) => {
     if (newPage >= 1 && newPage <= totalPages) {
       setPage(newPage);
     }
   };
-
-  const totalPages = Math.ceil(allCountries.length / 10);
+  const totalPages = Math.ceil(allCountries.length / countriesPerPage);
 
   return (
     <div className={styles.containerHomePage}>
@@ -65,6 +73,7 @@ const HomePage = () => {
         handleSubmit={handleSubmit}
         continentList={continentList}
         onContinentChange={handleContinentChange}
+        handleActivityChange={handleActivityChange} 
       />
 
       <CardsCountries
@@ -73,6 +82,8 @@ const HomePage = () => {
         getDetailCountry={getDetailCountry}
         currentPage={page}
         PageToBeChange={PageToBeChange}
+        selectedActivity={selectedActivity} 
+        countriesPerPage={countriesPerPage} 
       />
 
       <Pagination

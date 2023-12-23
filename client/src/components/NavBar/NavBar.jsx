@@ -28,6 +28,7 @@ const NavBar = ({
     navigate(ROUTES.WELCOME_PAGE);
   };
 
+  
   useEffect(() => {
     dispatch(getActivities());
   }, [dispatch]);
