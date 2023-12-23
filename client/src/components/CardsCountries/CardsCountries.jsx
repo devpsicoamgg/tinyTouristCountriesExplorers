@@ -8,6 +8,9 @@ const CardsCountries = ({ allCountries, currentPage }) => {
     return <Loader className={styles.loader} />;
   }
 
+
+  console.log("All Countries in CardsCountries:", allCountries);
+
   const startIndex = (currentPage - 1) * 10;
   const endIndex = startIndex + 10;
   const countriesToBeShown = allCountries.slice(startIndex, endIndex);

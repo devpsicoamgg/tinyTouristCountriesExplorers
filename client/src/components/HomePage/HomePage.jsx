@@ -5,14 +5,19 @@ import {
   getAllCountries,
   getDetailCountry,
   getCountryByName,
+  getContinentList,
+  filterByContinent,
 } from "../../redux/actions/actions";
 import CardsCountries from "../CardsCountries/CardsCountries";
 import NavBar from "../NavBar/NavBar";
 import Pagination from "../Pagination/Pagination";
 
+
 const HomePage = () => {
   const dispatch = useDispatch();
   const allCountries = useSelector((state) => state.allCountries);
+  const continentList = useSelector((state) => state.continentList);
+
   const [searchByString, setSearchByString] = useState("");
   const [page, setPage] = useState(1);
 
@@ -29,9 +34,19 @@ const HomePage = () => {
     setPage(1);
   };
 
+  const handleContinentChange = (selectedContinent) => {
+    dispatch(
+      filterByContinent(
+        selectedContinent === "Continents" ? "" : selectedContinent
+      )
+    );
+    setPage(1);
+  };
+
   //se despacha la acción x useEffect getAll en el didMount
   useEffect(() => {
     dispatch(getAllCountries());
+    dispatch(getContinentList());
   }, [dispatch]);
 
   const PageToBeChange = (newPage) => {
@@ -44,7 +59,12 @@ const HomePage = () => {
 
   return (
     <div className={styles.containerHomePage}>
-      <NavBar handleChange={handleChange} handleSubmit={handleSubmit} />
+      <NavBar
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        continentList={continentList}
+        onContinentChange={handleContinentChange}
+      />
 
       <CardsCountries
         className={styles.CardsCountries}

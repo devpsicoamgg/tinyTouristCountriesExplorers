@@ -3,6 +3,10 @@ import {
   GET_ALL_COUNTRIES,
   GET_DETAIL_COUNTRY,
   GET_COUNTRY_BY_NAME,
+  GET_CONTINENT_LIST,
+  FILTER_BY_CONTINENT,
+  FILTER_BY_ACTIVITY,
+  GET_ACTIVITIES_LIST,
 } from "./actionTypes";
 
 export const getAllCountries = () => {
@@ -49,3 +53,31 @@ export const getCountryByName = (name) => {
     }
   };
 };
+
+
+
+export const getContinentList = () => {
+  return async function (dispatch) {
+    try {
+      const response = await axios("http://localhost:3001/countries");
+      const continentList = Array.from(
+        new Set(response.data.map((country) => country.continent))
+      );
+      dispatch({
+        type: GET_CONTINENT_LIST,
+        payload: continentList,
+      });
+    } catch (error) {
+      console.error("Error fetching continent list:", error);
+    }
+  };
+};
+
+export function filterByContinent(filter) {
+  return {
+    type: FILTER_BY_CONTINENT,
+    payload: filter,
+  };
+}
+
+
