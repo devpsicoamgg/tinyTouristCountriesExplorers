@@ -4,7 +4,7 @@ import ROUTES from "../../helpers/routesHelper";
 import styles from "./CardCountryPresentation.module.css";
 
 function CardCountryPresentation({ country }) {
-  const { flag, name, id, continent } = country;
+  const { flag, name, id, continent, population, area } = country;
   const navigate = useNavigate();
 
   const handleViewMore = () => {
@@ -15,7 +15,7 @@ function CardCountryPresentation({ country }) {
     <div className={styles.containerCardCountryPresentation}>
       <div className={styles.titleContainer}>
         <p>
-          {name} - {continent}
+         {name} - {continent} <br />
         </p>
       </div>
       <div className={styles.flagContainer}>

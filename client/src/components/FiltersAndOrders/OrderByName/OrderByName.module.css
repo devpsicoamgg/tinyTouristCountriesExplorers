@@ -1,0 +1,22 @@
+
+
+.containerOrderByName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -10px;
+  
+}
+
+.orderOptionsName {
+  font-family: 'Comic Sans MS', cursive, sans-serif; 
+  padding: 8px;
+  font-size: 16px;
+  border: 5px solid #ff0000;
+  border-radius: 55px;
+  color: rgb(0, 0, 0);
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: #ffffff9a;
+  text-shadow: 2px 2px 4px rgba(248, 146, 3, 0.951);
+}

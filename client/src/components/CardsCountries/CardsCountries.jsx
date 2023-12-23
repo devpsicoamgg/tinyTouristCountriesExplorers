@@ -8,8 +8,16 @@ const CardsCountries = ({ allCountries, currentPage }) => {
     return <Loader className={styles.loader} />;
   }
 
-
-  console.log("All Countries in CardsCountries:", allCountries);
+  if (!Array.isArray(allCountries)) {
+    //   window.alert(
+    //    "No way, any country called" + allCountries
+    //  );
+    return (
+      <p className={styles.pErrorBack}>
+        {allCountries} 😕 So sorry !!!
+      </p>
+    );
+  }
 
   const startIndex = (currentPage - 1) * 10;
   const endIndex = startIndex + 10;

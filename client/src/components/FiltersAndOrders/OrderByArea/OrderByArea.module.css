@@ -1,5 +1,6 @@
 
-.containerOrderByPopulation {
+
+.containerOrderByArea {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,16 +8,16 @@
   
 }
 
-.orderOptionsPopulation {
+.orderOptions {
   font-family: 'Comic Sans MS', cursive, sans-serif; 
   padding: 8px;
   font-size: 16px;
-  border: 5px solid #290014;
+  border: 5px solid #190551;
   border-radius: 55px;
   color: rgb(0, 0, 0);
-  background-color: #f6ff0055;
   margin-left: 10px;
   cursor: pointer;
   background-color: #ffffff9a;
-  text-shadow: 2px 2px 4px rgba(167, 0, 153, 0.951);
+  text-shadow: 2px 2px 4px rgba(238, 5, 5, 0.951);
 }
+

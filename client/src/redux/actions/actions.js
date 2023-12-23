@@ -1,12 +1,14 @@
+/* actions.js */
+
 import axios from "axios";
 import {
   GET_ALL_COUNTRIES,
   GET_DETAIL_COUNTRY,
   GET_COUNTRY_BY_NAME,
   GET_CONTINENT_LIST,
+  GET_ACTIVITIES,
   FILTER_BY_CONTINENT,
-  FILTER_BY_ACTIVITY,
-  GET_ACTIVITIES_LIST,
+  ORDER,
 } from "./actionTypes";
 
 export const getAllCountries = () => {
@@ -27,7 +29,7 @@ export const getDetailCountry = (id) => {
   return async (dispatch) => {
     try {
       const { data } = await axios.get(`http://localhost:3001/countries/${id}`);
-      return dispatch({
+      dispatch({
         type: GET_DETAIL_COUNTRY,
         payload: data,
       });
@@ -41,20 +43,19 @@ export const getDetailCountry = (id) => {
 export const getCountryByName = (name) => {
   return async function (dispatch) {
     try {
-      const response = await axios(
+      const response = await axios.get(
         `http://localhost:3001/countries/?name=${name}`
       );
-      return dispatch({
+      const countries = response.data || []; 
+      dispatch({
         type: GET_COUNTRY_BY_NAME,
-        payload: response.data,
+        payload: countries,
       });
     } catch (error) {
       console.error(error);
     }
   };
 };
-
-
 
 export const getContinentList = () => {
   return async function (dispatch) {
@@ -80,4 +81,21 @@ export function filterByContinent(filter) {
   };
 }
 
+export const orderCards = (orden) => {
+  return { type: ORDER, payload: orden };
+};
 
+
+export const getActivities = () => {
+  return async (dispatch) => {
+    try {
+      const { data } = await axios.get("http://localhost:3001/activities");
+      dispatch({
+        type: GET_ACTIVITIES,
+        payload: data,
+      });
+    } catch (error) {
+      console.error("Error fetching activities:", error);
+    }
+  };
+};

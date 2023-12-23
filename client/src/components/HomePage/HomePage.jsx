@@ -7,11 +7,11 @@ import {
   getCountryByName,
   getContinentList,
   filterByContinent,
+  getActivities,
 } from "../../redux/actions/actions";
 import CardsCountries from "../CardsCountries/CardsCountries";
 import NavBar from "../NavBar/NavBar";
 import Pagination from "../Pagination/Pagination";
-
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -47,6 +47,7 @@ const HomePage = () => {
   useEffect(() => {
     dispatch(getAllCountries());
     dispatch(getContinentList());
+    dispatch(getActivities());
   }, [dispatch]);
 
   const PageToBeChange = (newPage) => {

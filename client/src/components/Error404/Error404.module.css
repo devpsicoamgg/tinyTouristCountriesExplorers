@@ -23,4 +23,11 @@
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.93);
   transform: rotateZ(12deg);
   box-shadow: 0 12px 50px rgba(255, 0, 0, 1); 
+  cursor: pointer;
+}
+
+
+.errorText:hover {
+  font-size: 160px; 
+  cursor: pointer;
 }
