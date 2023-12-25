@@ -18,18 +18,18 @@ const CardsCountries = ({ allCountries, currentPage, selectedActivity, countries
   const startIndex = (currentPage - 1) * countriesPerPage;
   const endIndex = startIndex + countriesPerPage;
 
-  const filteredCountries = allCountries.filter(
+
+const countriesToBeShown = allCountries
+  .filter(
     (country) =>
       !selectedActivity ||
       (country.Activities &&
         country.Activities.some(
           (activity) => activity.name.toLowerCase() === selectedActivity.toLowerCase()
         ))
-  );
+  ).slice(startIndex, endIndex);
 
-  const countriesToBeShown = filteredCountries.slice(startIndex, endIndex);
 
-  
   return (
     <div className={styles.containerCardsCountries}>
       {countriesToBeShown.map((country) => (

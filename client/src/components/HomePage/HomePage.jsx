@@ -57,17 +57,9 @@ const HomePage = () => {
     dispatch(getContinentList());
     dispatch(getActivities());
   }, [dispatch, selectedActivity]);
+  
 
-  const filteredCountries = allCountries.filter(
-    (country) =>
-      !selectedActivity ||
-      (country.Activities &&
-        country.Activities.some(
-          (activity) => activity.name.toLowerCase() === selectedActivity.toLowerCase()
-        ))
-  );
-
-  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage);
+  const totalPages = Math.ceil(allCountries.length / countriesPerPage);
   
   const PageToBeChange = (newPage) => {
     if (newPage >= 1 && newPage <= totalPages) {
