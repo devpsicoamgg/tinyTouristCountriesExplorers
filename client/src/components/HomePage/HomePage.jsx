@@ -17,8 +17,7 @@ const HomePage = () => {
   const dispatch = useDispatch();
   const allCountries = useSelector((state) => state.allCountries);
   const continentList = useSelector((state) => state.continentList);
-  const countriesPerPage = 10; 
-
+  const countriesPerPage = 10;
 
   const [selectedActivity, setSelectedActivity] = useState("");
   const [searchByString, setSearchByString] = useState("");
@@ -48,23 +47,33 @@ const HomePage = () => {
 
   const handleActivityChange = (selectedActivity) => {
     setSelectedActivity(selectedActivity);
+    setPage(1);
   };
+  
 
   //se despacha la acción x useEffect getAll en el didMount
   useEffect(() => {
     dispatch(getAllCountries());
     dispatch(getContinentList());
     dispatch(getActivities());
-  }, [dispatch]);
+  }, [dispatch, selectedActivity]);
 
+  const filteredCountries = allCountries.filter(
+    (country) =>
+      !selectedActivity ||
+      (country.Activities &&
+        country.Activities.some(
+          (activity) => activity.name.toLowerCase() === selectedActivity.toLowerCase()
+        ))
+  );
 
-
+  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage);
+  
   const PageToBeChange = (newPage) => {
     if (newPage >= 1 && newPage <= totalPages) {
       setPage(newPage);
     }
   };
-  const totalPages = Math.ceil(allCountries.length / countriesPerPage);
 
   return (
     <div className={styles.containerHomePage}>
@@ -73,17 +82,16 @@ const HomePage = () => {
         handleSubmit={handleSubmit}
         continentList={continentList}
         onContinentChange={handleContinentChange}
-        handleActivityChange={handleActivityChange} 
+        handleActivityChange={handleActivityChange}
       />
 
       <CardsCountries
         className={styles.CardsCountries}
         allCountries={allCountries}
-        getDetailCountry={getDetailCountry}
         currentPage={page}
         PageToBeChange={PageToBeChange}
-        selectedActivity={selectedActivity} 
-        countriesPerPage={countriesPerPage} 
+        selectedActivity={selectedActivity}
+        countriesPerPage={countriesPerPage}
       />
 
       <Pagination
