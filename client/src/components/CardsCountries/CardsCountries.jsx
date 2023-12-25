@@ -3,7 +3,7 @@ import styles from "./CardsCountries.module.css";
 import CardCountryPresentation from "../CardCountryPresentation/CardCountryPresentation";
 import Loader from "../Loaders/Loader";
 
-const CardsCountries = ({ allCountries, currentPage, selectedActivity, countriesPerPage }) => {
+const CardsCountries = ({ allCountries, activitiesList, currentPage, selectedActivity, countriesPerPage }) => {
   if (allCountries.length === 0) {
     return <Loader className={styles.loader} />;
   }
@@ -15,24 +15,20 @@ const CardsCountries = ({ allCountries, currentPage, selectedActivity, countries
     return <p className={styles.pErrorBack}>{allCountries} 😕 So sorry !!!</p>;
   }
 
+  const countriesToBeShown = selectedActivity
+    ? allCountries.filter((country) =>
+        country.Activities.some((activity) => activity.name.toLowerCase() === selectedActivity.toLowerCase())
+      )
+    : allCountries;
+
   const startIndex = (currentPage - 1) * countriesPerPage;
   const endIndex = startIndex + countriesPerPage;
 
-
-const countriesToBeShown = allCountries
-  .filter(
-    (country) =>
-      !selectedActivity ||
-      (country.Activities &&
-        country.Activities.some(
-          (activity) => activity.name.toLowerCase() === selectedActivity.toLowerCase()
-        ))
-  ).slice(startIndex, endIndex);
-
+  const paginatedCountries = countriesToBeShown.slice(startIndex, endIndex);
 
   return (
     <div className={styles.containerCardsCountries}>
-      {countriesToBeShown.map((country) => (
+      {paginatedCountries.map((country) => (
         <CardCountryPresentation key={country.id} country={country} />
       ))}
     </div>

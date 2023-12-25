@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   getAllCountries,
-  getDetailCountry,
   getCountryByName,
   getContinentList,
   filterByContinent,
@@ -56,16 +55,23 @@ const HomePage = () => {
     dispatch(getAllCountries());
     dispatch(getContinentList());
     dispatch(getActivities());
-  }, [dispatch, selectedActivity]);
+  }, [dispatch]);
   
 
-  const totalPages = Math.ceil(allCountries.length / countriesPerPage);
-  
+  const selectedCountries = selectedActivity
+  ? allCountries.filter((country) =>
+      country.Activities.some((activity) => activity.name.toLowerCase() === selectedActivity.toLowerCase())
+    )
+  : allCountries;
+
+const totalPages = Math.ceil(selectedCountries.length / countriesPerPage);
+
   const PageToBeChange = (newPage) => {
     if (newPage >= 1 && newPage <= totalPages) {
       setPage(newPage);
     }
   };
+
 
   return (
     <div className={styles.containerHomePage}>
@@ -78,8 +84,7 @@ const HomePage = () => {
       />
 
       <CardsCountries
-        className={styles.CardsCountries}
-        allCountries={allCountries}
+        allCountries={selectedCountries}
         currentPage={page}
         PageToBeChange={PageToBeChange}
         selectedActivity={selectedActivity}
