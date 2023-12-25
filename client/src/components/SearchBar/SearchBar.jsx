@@ -11,7 +11,7 @@ const SearchBar = ({ handleChange, handleSubmit }) => {
           placeholder="🔎 search for a country"
           onChange={(event) => handleChange(event)}
         />
-        <button type="submit">Buscar</button>
+        <button className={styles.searchBtn} type="submit">Search</button>
       </form>
     </div>
   );

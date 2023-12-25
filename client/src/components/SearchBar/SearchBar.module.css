@@ -34,3 +34,29 @@
   outline: none;
   border: 2px solid #ff69b4; /* Cambiar el borde al enfocar el input */
 }
+
+
+.searchBtn {
+  font-family: 'Comic Sans MS', cursive, sans-serif; 
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: #000000;
+  text-shadow: 2px 2px 4px #ff06069a;
+}
+
+
+.searchBtn:hover {
+  font-family: 'Comic Sans MS', cursive, sans-serif; 
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 15px;
+  color: rgb(0, 0, 0);
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px #000b869a;
+}

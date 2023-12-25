@@ -9,6 +9,7 @@ import {
   GET_ACTIVITIES,
   FILTER_BY_CONTINENT,
   ORDER,
+  POST_NEW_ACTIVITY,
 } from "./actionTypes";
 
 export const getAllCountries = () => {
@@ -46,7 +47,7 @@ export const getCountryByName = (name) => {
       const response = await axios.get(
         `http://localhost:3001/countries/?name=${name}`
       );
-      const countries = response.data || []; 
+      const countries = response.data || [];
       dispatch({
         type: GET_COUNTRY_BY_NAME,
         payload: countries,
@@ -85,7 +86,6 @@ export const orderCards = (orden) => {
   return { type: ORDER, payload: orden };
 };
 
-
 export const getActivities = () => {
   return async (dispatch) => {
     try {
@@ -96,6 +96,41 @@ export const getActivities = () => {
       });
     } catch (error) {
       console.error("Error fetching activities:", error);
+    }
+  };
+};
+
+
+
+export const postNewActivity = (input) => {
+  // Asegúrate de convertir difficulty y duration a números
+  input.difficulty = Number(input.difficulty);
+  input.duration = Number(input.duration);
+
+  return async (dispatch) => {
+    try {
+      // Realizar la solicitud POST
+      const { data } = await axios.post(
+        `http://localhost:3001/activities/`,
+        input
+      );
+
+      // Imprimir datos de éxito en la consola (puedes quitar estos console.log en producción)
+      console.log("Nombre de la actividad:", input.name);
+      console.log("Datos de la respuesta:", data);
+
+      // Despachar la acción con los datos recibidos
+      dispatch({
+        type: POST_NEW_ACTIVITY,
+        payload: data,
+      });
+    } catch (error) {
+      // Imprimir detalles del error en la consola
+      console.error("Error en la solicitud:", error.response?.data || error.message);
+      window.alert("An error. Re-check");
+
+      // Lanzar el error para que pueda ser manejado en otros lugares si es necesario
+      throw new Error(error);
     }
   };
 };

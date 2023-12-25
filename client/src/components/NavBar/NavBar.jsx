@@ -6,6 +6,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import FilterByContinent from "../FiltersAndOrders/FilterByContinent/FilterByContinent";
 import styles from "./NavBar.module.css";
 import TITLE from "../../images/titleMain.png";
+import CREATEACTIMG from "../../images/createAct.png";
 import OrderByArea from "../FiltersAndOrders/OrderByArea/OrderByArea";
 import OrderByName from "../FiltersAndOrders/OrderByName/OrderByName";
 import OrderByPopulation from "../FiltersAndOrders/OrderByPopulation/OrderByPopulation";
@@ -27,7 +28,9 @@ const NavBar = ({
   const handleNavigateToWelcomePage = () => {
     navigate(ROUTES.WELCOME_PAGE);
   };
-
+  const handleNavigateToActivity = () => {
+    navigate(ROUTES.ACTIVITIES_POST);
+  };
   
   useEffect(() => {
     dispatch(getActivities());
@@ -44,7 +47,7 @@ const NavBar = ({
             alt="Title"
           />
           <SearchBar handleChange={handleChange} handleSubmit={handleSubmit} />
-          <Link to={ROUTES.ACTIVITIES_POST}>👨🏽‍🎨👩🏽‍🎨</Link>
+        <img src={CREATEACTIMG} alt="Activities" className={styles.createActImgLink} onClick={handleNavigateToActivity}/> 
         </span>
         <div className={styles.containerNavBarSecondOne}>
           <FilterByContinent

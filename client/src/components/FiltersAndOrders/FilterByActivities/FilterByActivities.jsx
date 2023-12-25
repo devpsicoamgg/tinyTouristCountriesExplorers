@@ -1,14 +1,17 @@
+import React from "react";
 import styles from "./FilterByActivities.module.css";
 import { toPascalCase } from "../../../helpers/dataTransformation";
 
 const FilterByActivities = ({ activitiesList, handleActivityChange }) => {
-  console.log(activitiesList);
+  const uniqueActivities = new Set(
+    activitiesList.map((activity) => activity.name)
+  );
 
   const handleSelectChange = (event) => {
     const selectedActivity = event.target.value;
     handleActivityChange(selectedActivity);
   };
-  console.log(activitiesList);
+
   return (
     <div className={styles.containerFilterByActivities}>
       <select
@@ -17,9 +20,9 @@ const FilterByActivities = ({ activitiesList, handleActivityChange }) => {
         onChange={handleSelectChange}
       >
         <option value="">All Activities</option>
-        {activitiesList.map((activity) => (
-          <option key={activity.id} value={activity.name}>
-            {toPascalCase(activity.name)}
+        {[...uniqueActivities].map((activityName) => (
+          <option key={activityName} value={activityName}>
+            {toPascalCase(activityName)}
           </option>
         ))}
       </select>

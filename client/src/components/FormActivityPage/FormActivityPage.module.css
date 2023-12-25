@@ -2,6 +2,7 @@ body {
   width: 100vw; 
   height: 100vh;
   margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif; 
 }
 
 .containerFormActivityPage {
@@ -20,16 +21,60 @@ body {
   object-fit: contain;
 }
 
-img {
+.selectedInputCountries {
+  font-family: 'Comic Sans MS', cursive, sans-serif; 
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: #eaff069a;
+  text-shadow: 2px 2px 4px rgba(33, 0, 125, 0.951);
+}
+
+
+.seasonInput {
+  font-family: 'Comic Sans MS', cursive, sans-serif; 
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: #38ff069a;
+  text-shadow: 2px 2px 4px rgba(238, 5, 5, 0.951);
+}
+
+.firstOne {
+ height: 70px; 
+}
+
+.selected {
+  font-family: 'Comic Sans MS', cursive, sans-serif; 
+}
+
+.imgForm {
   width: 90%;
 }
+
+.homeLink {
+  width: 30%;
+  cursor: pointer;
+  transition: transform 0.3s ease; 
+}
+
+.homeLink:hover {
+  transform: scale(1.5);
+}
+
+
 
 .formContainer {
   background: rgba(0, 0, 0, 0.397);
   margin: 10px;
   font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 40px;
+  line-height: 1.2;
   margin-right: 160px;
   border-radius: 10px;
   padding: 20px; 
@@ -44,11 +89,29 @@ img {
   font-weight: bold; 
 }
 
+.countriesSelected {
+  font-size: 10px;
+  caret-color: #ff0000;
+}
+
 textarea {
   resize: none;
   width: 100%;
-  padding: 10px; /* Puedes ajustar el padding según tus preferencias */
-  border: 1px solid #ccc; /* Añade un borde para mayor claridad */
-  border-radius: 5px; /* Añade bordes redondeados */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #8e44ad;
+  caret-color: #ff0000;
   box-sizing: border-box;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: white; 
+}
+
+
+
+.errorText {
+  color: rgb(255, 191, 0);
+  font-size: 12px;
+  margin-top: 5px; 
+  text-decoration: underline red; 
 }

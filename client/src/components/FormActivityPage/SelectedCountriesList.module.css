@@ -1,0 +1,19 @@
+
+.selectedCountriesList {
+  height: 50px; /* Cambia el valor según tus necesidades */
+}
+
+
+.selectedCountry {
+  height: 50%; 
+  font-size: 10px;
+  background: linear-gradient(to right, #fecdcc, #b5f284);
+  border-radius: 15%;
+  margin-left: 5px;
+}
+
+
+.removeIcon {
+  height: 80vh; 
+  cursor: pointer;
+}

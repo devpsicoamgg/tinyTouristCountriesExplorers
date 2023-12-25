@@ -10,6 +10,7 @@ import {
   GET_ACTIVITIES,
   FILTER_BY_CONTINENT,
   ORDER,
+  POST_NEW_ACTIVITY,
 } from "../actions/actionTypes";
 
 const initialState = {
@@ -18,6 +19,7 @@ const initialState = {
   detailCountry: {},
   continentList: [],
   activitiesList: [],
+  activitiesCreated: [],
 };
 
 export const reducer = (state = initialState, action) => {
@@ -54,74 +56,80 @@ export const reducer = (state = initialState, action) => {
     }
 
     case ORDER:
-      if (action.payload === "ascArea") {
-        const orderedCountries = [...state.allCountries].sort(
-          (a, b) => a.area - b.area
-        );
-        return { ...state, allCountries: orderedCountries };
-      }
-      if (action.payload === "descArea") {
-        const orderedCountries = [...state.allCountries].sort(
-          (a, b) => b.area - a.area
-        );
-        return { ...state, allCountries: orderedCountries };
-      }
-      if (action.payload === "randomArea") {
-        const orderedCountries = [...state.allCountries].sort(
-          () => Math.random() - 0.5
-        );
-        return { ...state, allCountries: orderedCountries };
-      }
+  if (action.payload === "ascArea") {
+    const orderedCountries = [...state.allCountries].sort(
+      (a, b) => a.area - b.area
+    );
+    return { ...state, allCountries: orderedCountries };
+  }
+  if (action.payload === "descArea") {
+    const orderedCountries = [...state.allCountries].sort(
+      (a, b) => b.area - a.area
+    );
+    return { ...state, allCountries: orderedCountries };
+  }
+  if (action.payload === "randomArea") {
+    const orderedCountries = [...state.allCountries].sort(
+      () => Math.random() - 0.5
+    );
+    return { ...state, allCountries: orderedCountries };
+  }
 
-      if (action.payload === "ascName") {
-        const orderedCountries = [...state.allCountries].sort((a, b) =>
-          a.name.localeCompare(b.name)
-        );
-        return { ...state, allCountries: orderedCountries };
-      }
-      if (action.payload === "descName") {
-        const orderedCountries = [...state.allCountries].sort((a, b) =>
-          b.name.localeCompare(a.name)
-        );
-        return { ...state, allCountries: orderedCountries };
-      }
-      if (action.payload === "randomName") {
-        const orderedCountries = [...state.allCountries].sort(
-          () => Math.random() - 0.5
-        );
-        return { ...state, allCountries: orderedCountries };
-      }
+  if (action.payload === "ascName") {
+    const orderedCountries = [...state.allCountries].sort((a, b) =>
+      a.name.localeCompare(b.name)
+    );
+    return { ...state, allCountries: orderedCountries };
+  }
+  if (action.payload === "descName") {
+    const orderedCountries = [...state.allCountries].sort((a, b) =>
+      b.name.localeCompare(a.name)
+    );
+    return { ...state, allCountries: orderedCountries };
+  }
+  if (action.payload === "randomName") {
+    const orderedCountries = [...state.allCountries].sort(
+      () => Math.random() - 0.5
+    );
+    return { ...state, allCountries: orderedCountries };
+  }
 
-      if (action.payload === "ascPopulation") {
-        const orderedCountries = [...state.allCountries].sort(
-          (a, b) => a.population - b.population
-        );
-        return { ...state, allCountries: orderedCountries };
-      }
-      if (action.payload === "descPopulation") {
-        const orderedCountries = [...state.allCountries].sort(
-          (a, b) => b.population - a.population
-        );
-        return { ...state, allCountries: orderedCountries };
-      }
-      if (action.payload === "randomPopulation") {
-        const orderedCountries = [...state.allCountries].sort(
-          () => Math.random() - 0.5
-        );
-        return { ...state, allCountries: orderedCountries };
-      }
+  if (action.payload === "ascPopulation") {
+    const orderedCountries = [...state.allCountries].sort(
+      (a, b) => a.population - b.population
+    );
+    return { ...state, allCountries: orderedCountries };
+  }
+  if (action.payload === "descPopulation") {
+    const orderedCountries = [...state.allCountries].sort(
+      (a, b) => b.population - a.population
+    );
+    return { ...state, allCountries: orderedCountries };
+  }
+  if (action.payload === "randomPopulation") {
+    const orderedCountries = [...state.allCountries].sort(
+      () => Math.random() - 0.5
+    );
+    return { ...state, allCountries: orderedCountries };
+  }
 
-      if (action.payload === "default") {
-        return { ...state, allCountries: [...state.allCountries] };
-      }
+  if (action.payload === "default") {
+    return { ...state, allCountries: [...state.allCountries] };
+  }
+  break; 
 
-      break;
+case GET_ACTIVITIES:
+  return {
+    ...state,
+    activitiesList: action.payload,
+  };
+  
+case POST_NEW_ACTIVITY:
+  return {
+    ...state,
+    activitiesCreated: [...state.activitiesCreated, action.payload],
+  };
 
-      case GET_ACTIVITIES:
-        return {
-          ...state,
-          activitiesList: action.payload,
-        };
 
     default:
       return state;

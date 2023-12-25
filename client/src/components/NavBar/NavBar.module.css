@@ -24,7 +24,7 @@
   z-index: 1; 
 }
 
-.containerNavBarFirstOne img:hover {
+.containerNavBarFirstOne .titleMain:hover {
   transform: scale(2.3) translate(25px, 20px) rotate(-25deg); 
 
 }
@@ -42,4 +42,14 @@
   align-items: center;
   padding: 10px;
   margin-top: -15px;
+}
+
+
+.createActImgLink {
+  width: 100px;
+  margin-right: 40px;
+}
+
+.createActImgLink:hover {
+  transform: scale(2.3) translate(-20px, 20px) rotate(45deg);
 }
