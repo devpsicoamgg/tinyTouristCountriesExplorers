@@ -115,9 +115,6 @@ export const postNewActivity = (input) => {
         input
       );
 
-      // Imprimir datos de éxito en la consola (puedes quitar estos console.log en producción)
-      console.log("Nombre de la actividad:", input.name);
-      console.log("Datos de la respuesta:", data);
 
       // Despachar la acción con los datos recibidos
       dispatch({
