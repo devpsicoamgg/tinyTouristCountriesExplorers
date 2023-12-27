@@ -111,23 +111,19 @@ export const postNewActivity = (input) => {
   return async (dispatch) => {
     try {
       // Realizar la solicitud POST
-      const { data } = await axios.post(
+      const data = await axios.post(
         `http://localhost:3001/activities/`,
         input
       );
-
-
-      // Despachar la acción con los datos recibidos
       dispatch({
         type: POST_NEW_ACTIVITY,
         payload: data,
       });
+      console.log(input);
+     return data;
     } catch (error) {
-      // Imprimir detalles del error en la consola
       console.error("Error en la solicitud:", error.response?.data || error.message);
       window.alert("An error. Re-check");
-
-      // Lanzar el error para que pueda ser manejado en otros lugares si es necesario
       throw new Error(error);
     }
   };

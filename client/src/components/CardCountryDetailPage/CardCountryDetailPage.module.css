@@ -22,7 +22,12 @@
   line-height: 1.6;
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 8px 8px rgb(0, 0, 0);
+  box-shadow: 8px 8px 8px rgb(0, 0, 0);
+}
+
+.detailContainer:hover {
+  background: rgba(73, 198, 179, 0.692);
+  box-shadow: 8px 8px 8px rgb(215, 9, 9);
 }
 
 .imageContainer {
@@ -56,7 +61,7 @@
   font-size: 12px;
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 8px 8px rgb(255, 0, 0);
+  box-shadow: 8px 8px 8px rgb(255, 0, 0);
   transition: transform 0.3s ease; 
 }
 
@@ -89,7 +94,7 @@
 
 .activitiesContainer:hover {
   background-color: #00dcb0;
-  box-shadow: 0 8px 8px rgb(0, 0, 0);
+  box-shadow: 8px 8px 8px rgb(0, 0, 0);
   color: rgb(0, 0, 0);
   .hr {
     height: 2px;
@@ -119,7 +124,7 @@ transition: transform 0.3s ease;
 
 
 .aref {
-  color: rgb(0, 13, 130);
+  color: rgb(10, 13, 188);
   line-height: 2;
   text-decoration: none;
   font-size: 14px;

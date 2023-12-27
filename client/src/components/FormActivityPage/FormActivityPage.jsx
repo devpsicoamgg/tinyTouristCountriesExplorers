@@ -19,6 +19,7 @@ const FormActivityPage = () => {
   const dispatch = useDispatch();
   const countries = useSelector((state) => state.allCountries);
 
+  const [postedOk, setPostedOk] = useState(false);
   const [formData, setFormData] = useState({
     selectedCountries: [],
     name: "",
@@ -105,6 +106,8 @@ const FormActivityPage = () => {
           dispatch(postNewActivity({ ...formData, id: countryId }))
         )
       );
+      setPostedOk(true);
+
       setErrors({
         name: "",
         difficulty: "",
@@ -120,7 +123,12 @@ const FormActivityPage = () => {
         description: "",
       });
 
-      handleNavigateToHome();
+   /*   setTimeout(() => {
+        handleNavigateToHome();
+      }, 5000);
+
+*/
+
     } catch (error) {
       console.error(error);
       setErrors({
@@ -137,6 +145,13 @@ const FormActivityPage = () => {
           <img className={styles.imgForm} src={IMGFORM} alt="PICK SIT" />
         </div>
 
+        {postedOk && (
+              <spam className={styles.postedOkMessage}>
+                <p>Your activity has been <br /> posted successfully <br /> 🤩! </p>
+              </spam>
+            )}
+
+
         <div className={styles.formContainer}>
           <img
             src={homeImg}
@@ -146,7 +161,9 @@ const FormActivityPage = () => {
           />
           <form onSubmit={handleSubmit}>
             <h3 id="formTitle" className={styles.formTitle}>
-              New Tourist Activity
+              {!postedOk
+                ? "New Tourist Activity"
+                : "New Tourist Activity Created"}
             </h3>
             <div className={styles.firstOne}>
               <select
@@ -243,10 +260,10 @@ const FormActivityPage = () => {
             <br />
             <br />
             <label htmlFor="textAreaActivity">Enter a description:</label>
-            <br />
             {errors.description && (
               <p className={styles.errorText}>{errors.description}</p>
-            )}
+              )}
+              <br />
             <textarea
               id="textAreaActivity"
               onBlur={handleInputChange}

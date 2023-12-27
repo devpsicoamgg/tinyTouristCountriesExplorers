@@ -36,7 +36,7 @@ body {
 
 .seasonInput {
   font-family: 'Comic Sans MS', cursive, sans-serif; 
-  padding: 8px;
+  padding: 2px;
   font-size: 12px;
   border-radius: 5px;
   color: rgb(0, 0, 0);
@@ -69,12 +69,34 @@ body {
 }
 
 
+.formTitle {
+  color: #270038;
+  text-shadow: 2px 2px 4px #ccc;
+}
+
+@keyframes postedOkMessage {
+  0%, 100% { transform: translate(30px, 0); }
+  50% { transform: translate(-1px, 0); }
+}
+
+.postedOkMessage {
+  color:rgb(83, 51, 0);
+  text-shadow: 2px 2px 4px #ffffff;
+  box-shadow: 2px 2px 4px #000000; 
+  background-color: #11ff009a;
+  border-radius: 15px; 
+  margin-top: -400px;
+  margin-left: 467px;
+  padding: 10px;
+  position: absolute; 
+  animation: postedOkMessage 2s ease-in-out infinite;
+}
 
 .formContainer {
   background: rgba(0, 0, 0, 0.397);
   margin: 10px;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 1.4;
   margin-right: 160px;
   border-radius: 10px;
   padding: 20px; 

@@ -93,6 +93,10 @@ const CardCountryDetailPage = () => {
                         </p>
                         <hr className={styles.hr} />
                       </details>
+                      <a className={styles.aref} href={ROUTES.ACTIVITIES_POST}>
+                    {" "}
+                    🛠️  {" "}
+                  </a>
                     </div>
                   ))}
                 </>
