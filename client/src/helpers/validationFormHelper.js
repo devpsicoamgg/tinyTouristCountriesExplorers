@@ -6,8 +6,8 @@ export const validateDifficulty = (difficulty) => {
 };
 
 export const validateDuration = (duration) => {
-  if (!duration || isNaN(duration) || duration <= 0) {
-    return "Duration should be a positive number.";
+  if (!duration || isNaN(duration) || duration <= 0 || duration > 24) {
+    return "Duration should be a positive number less than 24 hours.";
   }
   return undefined; // No error
 };
@@ -16,8 +16,22 @@ export const validateName = (value) => {
   if (/[\d]/.test(value)) {
     return "Name should not contain numbers.";
   }
+
+  if (value.length <= 3) {
+    return "Name should be more than 3 characters.";
+  }
+
+  if (/[.,@$]/.test(value)) {
+    return "Special characters like '.', ',', '@', '$' are not allowed.";
+  }
+  
+  if (/(.)\1\1/.test(value)) {
+    return "Three identical letters in a row are not allowed.";
+  }
+
   return "";
 };
+
 
 export const validateDescription = (value) => {
   const forbiddenWords = ["ugly", "cry", "sad"];

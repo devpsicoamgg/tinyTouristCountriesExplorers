@@ -92,6 +92,20 @@ body {
   animation: postedOkMessage 2s ease-in-out infinite;
 }
 
+
+.errorMessage {
+  color:rgb(0, 0, 0);
+  text-shadow: 2px 2px 4px #ffffff;
+  box-shadow: 2px 2px 4px #000000; 
+  background-color: #ff00009a;
+  border-radius: 15px; 
+  margin-top: -300px;
+  margin-left: 467px;
+  padding: 10px;
+  position: absolute; 
+  animation: postedOkMessage  2s ease-in-out infinite;
+}
+
 .formContainer {
   background: rgba(0, 0, 0, 0.397);
   margin: 10px;
