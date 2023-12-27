@@ -42,3 +42,94 @@
   border-radius: 5px;
   margin-top: 10px;
 }
+
+
+.activitiesContainer {
+  color: aliceblue;
+  margin-top: -478px;
+  margin-left: 550px;
+  background-color: #2e1538dc;
+  width: 190px;
+  height: auto;
+  line-height: 0.6;
+  display: block; 
+  font-size: 12px;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 8px 8px rgb(255, 0, 0);
+  transition: transform 0.3s ease; 
+}
+
+
+.summaryTitle {
+  color: aliceblue;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  list-style-type: "🕵🏼"
+}
+
+.summaryTitle:hover {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+  list-style-type: "🕵🏼";
+}
+
+.activityDetails[open] >  .summaryTitle {
+  list-style-type: "🥸";
+}
+
+.hr {
+  height: 1px;
+  background-color: #ddd; 
+}
+
+
+.activitiesContainer:hover {
+  background-color: #00dcb0;
+  box-shadow: 0 8px 8px rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  .hr {
+    height: 2px;
+    background-color: #ff0000; 
+  }
+}
+
+
+
+
+
+.homeLink{
+height: 60px;
+filter: drop-shadow(2px 2px 4px rgb(255, 0, 0));
+cursor: pointer;
+transition: transform 0.3s ease; 
+}
+
+.homeLink:hover {
+  transform: scale(1.5);
+  filter: drop-shadow(2px 2px 4px rgb(225, 255, 0));
+}
+
+.pSpecial {
+  line-height: 1.5;
+}
+
+
+.aref {
+  color: rgb(0, 13, 130);
+  line-height: 2;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.aref:hover{
+  color: rgb(255, 0, 21);
+  line-height: 2;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+}

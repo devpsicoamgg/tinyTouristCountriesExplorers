@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetailCountry } from "../../redux/actions/actions";
-import { Link, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import homeImg from "../../images/home.png";
 import ROUTES from "../../helpers/routesHelper";
 import IMGDETAILCOUNTRY from "../../images/boyShowing.png";
 import styles from "../CardCountryDetailPage/CardCountryDetailPage.module.css";
@@ -10,9 +11,12 @@ import Loader from "../Loaders/Loader";
 const CardCountryDetailPage = () => {
   const selectedCountry = useSelector((state) => state.detailCountry);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const populationNumber = parseInt(selectedCountry.population, 10);
   const selectedCountryArea = parseInt(selectedCountry.area, 10);
   let { id } = useParams();
+
+  const handleNavigateToHome = () => navigate(ROUTES.HOME);
 
   useEffect(() => {
     dispatch(getDetailCountry(id));
@@ -33,18 +37,6 @@ const CardCountryDetailPage = () => {
                 <b>Subregion:</b> {selectedCountry.subregion}. <br />
                 <b>Area:</b> {selectedCountryArea.toLocaleString()} Km². <br />
                 <b>Population:</b> {populationNumber.toLocaleString()}. <br />
-                <b>Activities:</b>{" "}
-                {selectedCountry.Activities &&
-                selectedCountry.Activities.length > 0 ? (
-                  <>
-                    {selectedCountry.Activities.map((activity, index) => (
-                      <span key={index}>{activity.name}</span>
-                    ))}
-                  </>
-                ) : (
-                  "Join the fun! Be the first one to create an activity."
-                )}{" "}
-                <br />
                 <b>Flag:</b>{" "}
                 <img
                   src={selectedCountry.flag}
@@ -54,17 +46,65 @@ const CardCountryDetailPage = () => {
                 <br />
                 <b>Coat:</b>
                 <img
-                  src={
-                    selectedCountry.coatOfArms || `${selectedCountry.flag} *`
-                  }
-                  alt={selectedCountry.flag}
+                  src={selectedCountry.coatOfArms}
+                  alt={selectedCountry.coatOfArms}
                   className={styles.countryImage}
                 />{" "}
                 <br />
+                <p>
+                  If you want to know where {selectedCountry.name} is located
+                  <a href={selectedCountry.maps} className={styles.aref} target="_blank" rel="noopener noreferrer"> Click here. </a> <br />
+                </p>
               </p>
-              <Link to={ROUTES.ACTIVITIES_POST}>Create an Activity</Link>
-              <br />
-              <Link to={ROUTES.HOME}>🏡 HOME</Link>
+              <hr />
+              <img
+                src={homeImg}
+                className={styles.homeLink}
+                alt="Home"
+                onClick={handleNavigateToHome}
+              />
+            </div>
+            <div className={styles.activitiesContainer}>
+              <h3>Activities:</h3>
+              {selectedCountry.Activities &&
+              selectedCountry.Activities.length > 0 ? (
+                <>
+                  {selectedCountry.Activities.map((activity, index) => (
+                    <div key={index}>
+                      <details className={styles.activityDetails}>
+                        <summary className={styles.summaryTitle}>
+                          {activity.name}
+                        </summary>
+                        <p>
+                          {" "}
+                          <b>Difficulty:</b> 💪🏼 {activity.difficulty}
+                        </p>
+                        <p>
+                          <b>Duration:</b> 🕑 {activity.duration} Hrs
+                        </p>
+                        <p>
+                          <b>Season:</b> 🌤️{activity.season}
+                        </p>
+                        <p>
+                          <b>Date Added:</b> 🗓️ {activity.date_added}
+                        </p>
+                        <p className={styles.pSpecial}>
+                          <b>Description:</b> ✍🏼{activity.description}
+                        </p>
+                        <hr className={styles.hr} />
+                      </details>
+                    </div>
+                  ))}
+                </>
+              ) : (
+                <p>
+                  Join the fun! Be the first one to
+                  <a className={styles.aref} href={ROUTES.ACTIVITIES_POST}>
+                    {" "}
+                    🛠️ create an activity 👈🏽{" "}
+                  </a>
+                </p>
+              )}
             </div>
           </div>
           <div className={styles.imageContainer}>

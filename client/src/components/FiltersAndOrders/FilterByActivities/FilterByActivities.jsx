@@ -3,9 +3,7 @@ import styles from "./FilterByActivities.module.css";
 import { toPascalCase } from "../../../helpers/dataTransformation";
 
 const FilterByActivities = ({ activitiesList, handleActivityChange }) => {
-  const uniqueActivities = new Set(
-    activitiesList.map((activity) => activity.name)
-  );
+  const uniqueActivities = new Set(activitiesList.map((activity) => activity.name));
 
   const handleSelectChange = (event) => {
     const selectedActivity = event.target.value;

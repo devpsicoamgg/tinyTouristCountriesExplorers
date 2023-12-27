@@ -30,6 +30,7 @@ export const getDetailCountry = (id) => {
   return async (dispatch) => {
     try {
       const { data } = await axios.get(`http://localhost:3001/countries/${id}`);
+      console.log("Data from API:", data);
       dispatch({
         type: GET_DETAIL_COUNTRY,
         payload: data,

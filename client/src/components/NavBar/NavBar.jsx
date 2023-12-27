@@ -21,7 +21,7 @@ const NavBar = ({
   orderCardsByType,
   handleActivityChange,
 }) => {
-  const dispatch = useDispatch(); // Obtén la función dispatch
+  const dispatch = useDispatch(); 
   const navigate = useNavigate();
   const activitiesList = useSelector((state) => state.activitiesList);
 

@@ -29,15 +29,15 @@ const saveDataControllerFromApiToDB = async () => {
         id: cca3,
         name: name.common || "No data comes from api about common name ⛔",
         officialname: name.official || "No data comes from api official name ⛔",
-        flag: flags.svg || "No data comes from api about flags in png ⛔",
+        flag: flags.svg || "No data comes from api about flags in svg ⛔",
         continent: continents[0] || "No continents found ⛔",
         capital: capital[0] || "This country looks like without capital ⛔",
         subregion: subregion || "No subregion found ⛔",
         area: area || "This country do not have lands ⛔",
-        maps: maps.openStreetMaps || "You never can find it on maps ⛔",
-        population: population || "No people? ⛔",
-        timezones: timezones[0] || "no time zone ⛔",
-        coatOfArms: coatOfArms.svg || "No coat of arms ⛔",
+        maps: maps.openStreetMaps || "You'll never can find it on maps ⛔",
+        population: population || "No data comes from api about population ⛔",
+        timezones: timezones[0] || "No data comes from api about time zone ⛔",
+        coatOfArms: coatOfArms.svg || "No data comes from api about Coat of arms ⛔",
       }));
 
     // F() de Sequelize para ingresar mas rápido

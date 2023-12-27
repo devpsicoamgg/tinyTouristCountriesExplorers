@@ -3,13 +3,20 @@
 const { Country, Activity } = require("../../db.js");
 //def
 const countriesGetAllController = async () =>
-//consulta en bd  
-await Country.findAll({
+  //consulta en bd
+  await Country.findAll({
     include: [
       {
         model: Activity,
         as: "Activities",
-        attributes: ["name"],
+        attributes: [
+          "name",
+          "duration",
+          "difficulty",
+          "season",
+          "description",
+          "date_added",
+        ],
         through: { attributes: [] },
       },
     ],

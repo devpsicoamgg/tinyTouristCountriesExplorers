@@ -119,6 +119,8 @@ const FormActivityPage = () => {
         duration: "",
         description: "",
       });
+
+      handleNavigateToHome();
     } catch (error) {
       console.error(error);
       setErrors({
@@ -221,7 +223,7 @@ const FormActivityPage = () => {
             {errors.duration && (
               <span className={styles.errorText}>{errors.duration}</span>
             )}
-            <br/>
+            <br />
             <label htmlFor="seasonInput">Select a season:</label>
             <select
               id="seasonInput"
@@ -269,4 +271,3 @@ const FormActivityPage = () => {
 };
 
 export default FormActivityPage;
-

@@ -57,12 +57,13 @@ const HomePage = () => {
     dispatch(getActivities());
   }, [dispatch]);
   
-
   const selectedCountries = selectedActivity
   ? allCountries.filter((country) =>
-      country.Activities.some((activity) => activity.name.toLowerCase() === selectedActivity.toLowerCase())
-    )
+  country.Activities.some((activity) => activity.name === selectedActivity)
+  )
   : allCountries;
+  
+
 
 const totalPages = Math.ceil(selectedCountries.length / countriesPerPage);
 
@@ -71,7 +72,6 @@ const totalPages = Math.ceil(selectedCountries.length / countriesPerPage);
       setPage(newPage);
     }
   };
-
 
   return (
     <div className={styles.containerHomePage}>

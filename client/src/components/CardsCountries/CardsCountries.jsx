@@ -3,7 +3,12 @@ import styles from "./CardsCountries.module.css";
 import CardCountryPresentation from "../CardCountryPresentation/CardCountryPresentation";
 import Loader from "../Loaders/Loader";
 
-const CardsCountries = ({ allCountries, activitiesList, currentPage, selectedActivity, countriesPerPage }) => {
+const CardsCountries = ({
+  allCountries,
+  currentPage,
+  selectedActivity,
+  countriesPerPage,
+}) => {
   if (allCountries.length === 0) {
     return <Loader className={styles.loader} />;
   }
@@ -16,18 +21,21 @@ const CardsCountries = ({ allCountries, activitiesList, currentPage, selectedAct
   }
 
   const countriesToBeShown = selectedActivity
-    ? allCountries.filter((country) =>
-        country.Activities.some((activity) => activity.name.toLowerCase() === selectedActivity.toLowerCase())
+  ? allCountries.filter((country) =>
+      country.Activities.some((activity) => {
+        return activity
+      })
       )
-    : allCountries;
+      : allCountries;
+      
 
-  const startIndex = (currentPage - 1) * countriesPerPage;
-  const endIndex = startIndex + countriesPerPage;
-
-  const paginatedCountries = countriesToBeShown.slice(startIndex, endIndex);
-
-  return (
-    <div className={styles.containerCardsCountries}>
+      const startIndex = (currentPage - 1) * countriesPerPage;
+      const endIndex = startIndex + countriesPerPage;
+      
+      const paginatedCountries = countriesToBeShown.slice(startIndex, endIndex);
+      
+      return (
+        <div className={styles.containerCardsCountries}>
       {paginatedCountries.map((country) => (
         <CardCountryPresentation key={country.id} country={country} />
       ))}
