@@ -15,19 +15,24 @@
 
 .detailContainer {
   width: 500px;
-  background: rgba(255, 255, 255, 0.397);
+  background-color: #2e1538;
   margin-top: 40px;
   margin-left: 100px;
   font-size: 16px;
   line-height: 1.6;
+  color: aliceblue;
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 8px 8px 8px rgb(0, 0, 0);
+  box-shadow: 8px 8px 8px rgb(215, 9, 9);
 }
 
 .detailContainer:hover {
-  background: rgba(73, 198, 179, 0.692);
-  box-shadow: 8px 8px 8px rgb(215, 9, 9);
+  background-color: #250022;
+  box-shadow: 18px 18px 18px rgb(215, 192, 19);
+  .hr {
+    height: 2px;
+    background-color: #eaff00; 
+  }
 }
 
 .imageContainer {
@@ -46,6 +51,7 @@
   border: 2px solid #000;
   border-radius: 5px;
   margin-top: 10px;
+  background-color: aliceblue;
 }
 
 
@@ -53,7 +59,7 @@
   color: aliceblue;
   margin-top: -478px;
   margin-left: 550px;
-  background-color: #2e1538dc;
+  background-color: #250022;
   width: 190px;
   height: auto;
   line-height: 0.6;
@@ -61,7 +67,7 @@
   font-size: 12px;
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 8px 8px 8px rgb(255, 0, 0);
+  box-shadow: 8px 8px 8px rgb(215, 192, 19);
   transition: transform 0.3s ease; 
 }
 
@@ -75,7 +81,6 @@
 }
 
 .summaryTitle:hover {
-  color: rgb(0, 0, 0);
   font-size: 20px;
   font-weight: bold;
   line-height: 1.5;
@@ -88,17 +93,16 @@
 
 .hr {
   height: 1px;
-  background-color: #ddd; 
+  background-color: #11ff00; 
 }
 
 
 .activitiesContainer:hover {
-  background-color: #00dcb0;
-  box-shadow: 8px 8px 8px rgb(0, 0, 0);
-  color: rgb(0, 0, 0);
+  background-color: #2e1538;
+  box-shadow: 8px 8px 8px rgb(215, 9, 9);
   .hr {
     height: 2px;
-    background-color: #ff0000; 
+    background-color: #eaff00; 
   }
 }
 
@@ -124,7 +128,7 @@ transition: transform 0.3s ease;
 
 
 .aref {
-  color: rgb(10, 13, 188);
+  color: rgb(188, 188, 10);
   line-height: 2;
   text-decoration: none;
   font-size: 14px;

@@ -30,7 +30,6 @@ export const getDetailCountry = (id) => {
   return async (dispatch) => {
     try {
       const { data } = await axios.get(`http://localhost:3001/countries/${id}`);
-      console.log("Data from API:", data);
       dispatch({
         type: GET_DETAIL_COUNTRY,
         payload: data,
@@ -104,14 +103,14 @@ export const getActivities = () => {
 
 
 export const postNewActivity = (input) => {
-  // Asegúrate de convertir difficulty y duration a números
+
   input.difficulty = Number(input.difficulty);
   input.duration = Number(input.duration);
 
   return async (dispatch) => {
     try {
       // Realizar la solicitud POST
-      const data = await axios.post(
+      const {data} = await axios.post(
         `http://localhost:3001/activities/`,
         input
       );
@@ -119,10 +118,9 @@ export const postNewActivity = (input) => {
         type: POST_NEW_ACTIVITY,
         payload: data,
       });
-      console.log(input);
-     return data;
+     return { data, summary: data.summary };
     } catch (error) {
-      console.error("Error en la solicitud:", error.response?.data || error.message);
+      console.error("Error on req", error.response?.data || error.message);
       window.alert("An error. Re-check");
       throw new Error(error);
     }

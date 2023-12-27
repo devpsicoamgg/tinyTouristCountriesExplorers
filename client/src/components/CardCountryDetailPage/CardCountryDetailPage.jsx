@@ -53,10 +53,19 @@ const CardCountryDetailPage = () => {
                 <br />
                 <p>
                   If you want to know where {selectedCountry.name} is located
-                  <a href={selectedCountry.maps} className={styles.aref} target="_blank" rel="noopener noreferrer"> Click here. </a> <br />
+                  <a
+                    href={selectedCountry.maps}
+                    className={styles.aref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {" "}
+                    Click here.{" "}
+                  </a>{" "}
+                  <br />
                 </p>
               </p>
-              <hr />
+              <hr className={styles.hr} />
               <img
                 src={homeImg}
                 className={styles.homeLink}
@@ -93,12 +102,13 @@ const CardCountryDetailPage = () => {
                         </p>
                         <hr className={styles.hr} />
                       </details>
-                      <a className={styles.aref} href={ROUTES.ACTIVITIES_POST}>
-                    {" "}
-                    🛠️  {" "}
-                  </a>
                     </div>
                   ))}
+                  <hr />
+                  <a className={styles.aref} href={ROUTES.ACTIVITIES_POST}>
+                    {" "}
+                    🛠️{" "}
+                  </a>
                 </>
               ) : (
                 <p>

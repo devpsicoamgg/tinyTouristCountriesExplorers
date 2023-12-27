@@ -19,6 +19,7 @@ const FormActivityPage = () => {
   const dispatch = useDispatch();
   const countries = useSelector((state) => state.allCountries);
 
+  const [responses, setResponses] = useState([]);
   const [postedOk, setPostedOk] = useState(false);
   const [formData, setFormData] = useState({
     selectedCountries: [],
@@ -101,12 +102,16 @@ const FormActivityPage = () => {
     }
 
     try {
-      await Promise.all(
+      const responses = await Promise.all(
         formData.selectedCountries.map((countryId) =>
           dispatch(postNewActivity({ ...formData, id: countryId }))
         )
       );
-      setPostedOk(true);
+
+      if (responses) {
+        setResponses(responses);
+        setPostedOk(true);
+      }
 
       setErrors({
         name: "",
@@ -123,12 +128,11 @@ const FormActivityPage = () => {
         description: "",
       });
 
-   /*   setTimeout(() => {
+      /*   setTimeout(() => {
         handleNavigateToHome();
       }, 5000);
 
 */
-
     } catch (error) {
       console.error(error);
       setErrors({
@@ -146,11 +150,22 @@ const FormActivityPage = () => {
         </div>
 
         {postedOk && (
-              <spam className={styles.postedOkMessage}>
-                <p>Your activity has been <br /> posted successfully <br /> 🤩! </p>
-              </spam>
-            )}
-
+          <span className={styles.postedOkMessage}>
+            <p>
+              Your activity has been <br /> posted successfully <br /> 🤩!{" "} <br/>
+              {responses.map((response, index) => (
+                <span key={index}>
+                  Difficulty 💪🏼: {response.data.difficulty} <br />
+                  Season 🌤️: {response.data.season} <br />
+                  Duration 🕑: {response.data.duration} Hrs. <br />
+                  Description ✍🏼: {response.data.description} <br />
+                   {response.data.date_added}
+            
+                </span>
+              ))}
+            </p>
+          </span>
+        )}
 
         <div className={styles.formContainer}>
           <img
@@ -262,8 +277,8 @@ const FormActivityPage = () => {
             <label htmlFor="textAreaActivity">Enter a description:</label>
             {errors.description && (
               <p className={styles.errorText}>{errors.description}</p>
-              )}
-              <br />
+            )}
+            <br />
             <textarea
               id="textAreaActivity"
               onBlur={handleInputChange}

@@ -6,7 +6,6 @@ export const validateDifficulty = (difficulty) => {
 };
 
 export const validateDuration = (duration) => {
-  // Puedes agregar más lógica de validación según tus necesidades
   if (!duration || isNaN(duration) || duration <= 0) {
     return "Duration should be a positive number.";
   }

@@ -67,13 +67,13 @@ SIRVE PARA NO ALMACENAR DIRECTAMENTE EN BD*/
       summary: {
         type: DataTypes.VIRTUAL,
         get() {
-          return `Summary: ${
-            this.name}. 
-            difficulty 💪🏼: ${this.difficulty}. 
-            Season 🌤️: ${this.season}. 
-            Duration 🕑: ${this.duration}. 
-            Description ✍🏼: ${this.description || "No description available" }. 
-            Added on 🗓️: ${this.date_added}CREATED ${this.createdInDb}`;
+          return `Summary: ${this.name}. Difficulty 💪🏼: ${
+            this.difficulty
+          }. Season 🌤️: ${this.season}. Duration 🕑: ${
+            this.duration
+          }. Description ✍🏼: ${
+            this.description || "No description available"
+          }. Added on 🗓️: ${this.date_added}CREATED ${this.createdInDb}`;
         },
       },
     },
