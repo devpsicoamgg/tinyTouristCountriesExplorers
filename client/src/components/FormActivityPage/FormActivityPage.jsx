@@ -21,11 +21,11 @@ const FormActivityPage = () => {
 
   const [responses, setResponses] = useState([]);
   const [postedOk, setPostedOk] = useState(false);
-  const [isFormValid, setIsFormValid] = useState(false);
   const [formData, setFormData] = useState({
     selectedCountries: [],
     name: "",
     difficulty: "",
+    season: "",
     duration: "",
     description: "",
   });
@@ -80,14 +80,7 @@ const FormActivityPage = () => {
     setFormData((prevFormData) => ({
       ...prevFormData,
       selectedCountries: [...prevFormData.selectedCountries, selectedCountryId],
-    }))
-
-    //btn submit 
-    if (!isFormValid) {
-      setErrors({ ...errors, submit:"" });
-      return;
-    }
-
+    }));
   };
 
   const handleCountryDeselect = (deselectedCountryId) => {
@@ -97,7 +90,16 @@ const FormActivityPage = () => {
         (id) => id !== deselectedCountryId
       ),
     }));
+  };
 
+  const diabledBtn = () => {
+    return (
+      formData.name !== "" &&
+      formData.difficulty !== "" &&
+      formData.duration !== "" &&
+      formData.season !== "" &&
+      formData.selectedCountries.length > 0
+    );
   };
 
   const handleNavigateToHome = () => navigate(ROUTES.HOME);
@@ -299,7 +301,7 @@ const FormActivityPage = () => {
             />
             <br />
 
-            <button type="submit" disabled={!isFormValid}>
+            <button type="submit" disabled={!diabledBtn()}>
               Submit
             </button>
 
