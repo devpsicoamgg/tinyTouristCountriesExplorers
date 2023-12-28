@@ -21,6 +21,7 @@ const FormActivityPage = () => {
 
   const [responses, setResponses] = useState([]);
   const [postedOk, setPostedOk] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
   const [formData, setFormData] = useState({
     selectedCountries: [],
     name: "",
@@ -79,7 +80,14 @@ const FormActivityPage = () => {
     setFormData((prevFormData) => ({
       ...prevFormData,
       selectedCountries: [...prevFormData.selectedCountries, selectedCountryId],
-    }));
+    }))
+
+    //btn submit 
+    if (!isFormValid) {
+      setErrors({ ...errors, submit:"" });
+      return;
+    }
+
   };
 
   const handleCountryDeselect = (deselectedCountryId) => {
@@ -89,6 +97,7 @@ const FormActivityPage = () => {
         (id) => id !== deselectedCountryId
       ),
     }));
+
   };
 
   const handleNavigateToHome = () => navigate(ROUTES.HOME);
@@ -152,15 +161,15 @@ const FormActivityPage = () => {
         {postedOk && (
           <span className={styles.postedOkMessage}>
             <p>
-              Your activity has been <br /> posted successfully <br /> 🤩!{" "} <hr/>
+              Your activity has been <br /> posted successfully <br /> 🤩!{" "}
+              <hr />
               {responses.map((response, index) => (
                 <span key={index}>
                   Difficulty 💪🏼: {response.data.difficulty} <br />
                   Season 🌤️: {response.data.season} <br />
                   Duration 🕑: {response.data.duration} Hrs. <br />
                   Description ✍🏼: {response.data.description} <br />
-                   {response.data.date_added}
-            
+                  {response.data.date_added}
                 </span>
               ))}
             </p>
@@ -290,7 +299,10 @@ const FormActivityPage = () => {
             />
             <br />
 
-            <button type="submit">Submit</button>
+            <button type="submit" disabled={!isFormValid}>
+              Submit
+            </button>
+
             <br />
             {errors.submit && (
               <span className={styles.errorText}>{errors.submit}</span>

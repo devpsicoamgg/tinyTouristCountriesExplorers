@@ -16,11 +16,13 @@
 .pErrorBack {
   display: inline; 
   font-size: 1.5em; 
-  font-weight: bold; 
+  font-weight: bold;
+  width: 350px; 
   color: #ffffff; 
-  background-color: #333333; 
+  background-color: #460101ea; 
   padding: 20px; 
   border-radius: 10px; 
   text-align: center; 
   margin-top: 20px; 
+  box-shadow: 8px 8px 8px rgb(36, 215, 9);
 }

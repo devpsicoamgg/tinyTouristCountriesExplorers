@@ -14,7 +14,7 @@ const countryByNameGetController = async (name) => {
     });
     //err 2 veces.
     return countriesFound.length === 0
-      ? ` No countries match with ${name.toUpperCase()} `
+      ? ` Are you kidding me? The country with name ${name.toUpperCase()} isn't here.`
       : countriesFound;
   } catch (error) {
     throw new Error(`Error throwed: ${error.message}`);
