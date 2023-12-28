@@ -152,7 +152,7 @@ const FormActivityPage = () => {
         {postedOk && (
           <span className={styles.postedOkMessage}>
             <p>
-              Your activity has been <br /> posted successfully <br /> 🤩!{" "} <br/>
+              Your activity has been <br /> posted successfully <br /> 🤩!{" "} <hr/>
               {responses.map((response, index) => (
                 <span key={index}>
                   Difficulty 💪🏼: {response.data.difficulty} <br />
