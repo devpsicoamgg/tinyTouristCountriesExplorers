@@ -100,17 +100,14 @@ export const getActivities = () => {
   };
 };
 
-
-
 export const postNewActivity = (input) => {
-
-  input.difficulty = Number(input.difficulty);
-  input.duration = Number(input.duration);
+  //  input.difficulty = Number(input.difficulty);
+  //  input.duration = Number(input.duration);
 
   return async (dispatch) => {
     try {
       // Realizar la solicitud POST
-      const {data} = await axios.post(
+      const { data } = await axios.post(
         `http://localhost:3001/activities/`,
         input
       );
@@ -118,7 +115,7 @@ export const postNewActivity = (input) => {
         type: POST_NEW_ACTIVITY,
         payload: data,
       });
-     return { data, summary: data.summary };
+      return { data, summary: data.summary };
     } catch (error) {
       console.error("Error on req", error.response?.data || error.message);
       window.alert("An error. Re-check");

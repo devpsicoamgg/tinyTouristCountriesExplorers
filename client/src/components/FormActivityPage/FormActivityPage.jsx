@@ -161,21 +161,26 @@ const FormActivityPage = () => {
         </div>
 
         {postedOk && (
-          <span className={styles.postedOkMessage}>
+          <div className={styles.postedOkMessage}>
             <p>
-              Your activity has been <br /> posted successfully <br /> 🤩!{" "}
-              <hr />
-              {responses.map((response, index) => (
-                <span key={index}>
-                  Difficulty 💪🏼: {response.data.difficulty} <br />
-                  Season 🌤️: {response.data.season} <br />
-                  Duration 🕑: {response.data.duration} Hrs. <br />
-                  Description ✍🏼: {response.data.description} <br />
-                  {response.data.date_added}
-                </span>
-              ))}
+              Your activity has been <br /> posted successfully <br /> 🤩!
             </p>
-          </span>
+            <details>
+              <summary>Show All Details</summary>
+              <div>
+                <hr />
+                {responses.map((response, index) => (
+                  <div key={index}>
+                    Difficulty 💪🏼: {response.data.difficulty} <br />
+                    Season 🌤️: {response.data.season} <br />
+                    Duration 🕑: {response.data.duration} Hrs. <br />
+                    Description ✍🏼: {response.data.description} <br />
+                    {response.data.date_added}
+                  </div>
+                ))}
+              </div>
+            </details>
+          </div>
         )}
 
         <div className={styles.formContainer}>

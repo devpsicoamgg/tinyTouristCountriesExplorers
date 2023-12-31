@@ -48,7 +48,6 @@ const HomePage = () => {
     setSelectedActivity(selectedActivity);
     setPage(1);
   };
-  
 
   //se despacha la acción x useEffect getAll en el didMount
   useEffect(() => {
@@ -56,16 +55,21 @@ const HomePage = () => {
     dispatch(getContinentList());
     dispatch(getActivities());
   }, [dispatch]);
-  
-  const selectedCountries = selectedActivity
-  ? allCountries.filter((country) =>
-  country.Activities.some((activity) => activity.name === selectedActivity)
-  )
-  : allCountries;
-  
 
 
-const totalPages = Math.ceil(selectedCountries.length / countriesPerPage);
+const allCountriesArray = Array.isArray(allCountries) ? allCountries : [];
+
+const selectedCountries = selectedActivity
+  ? allCountriesArray.filter((country) =>
+      country.Activities.some(
+        (activity) => activity.name === selectedActivity
+      )
+    )
+  : allCountriesArray;
+
+
+
+  const totalPages = Math.ceil(selectedCountries.length / countriesPerPage);
 
   const PageToBeChange = (newPage) => {
     if (newPage >= 1 && newPage <= totalPages) {
