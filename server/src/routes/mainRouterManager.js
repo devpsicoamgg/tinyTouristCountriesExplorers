@@ -1,17 +1,14 @@
 const { Router } = require("express");
 const mainRouterManager = Router();
-const countriesGetRouter = require('./theGettersRoutes/countriesGetRouters.js')
-const activitiesGetRouter = require('./theGettersRoutes/activitiesGetRouter.js')
-const activitiesPostRouter = require('./thePostersRouters/activitiesPostRouter.js')
+const countriesGetRouter = require("./theGettersRoutes/countriesGetRouters.js");
+const activitiesGetRouter = require("./theGettersRoutes/activitiesGetRouter.js");
+const activitiesPostRouter = require("./thePostersRouters/activitiesPostRouter.js");
+const activitiesEditRouter = require("./theEditRouter/activitiesEditRouter.js");
 
-
-
-
-mainRouterManager.use("/countries", countriesGetRouter) 
-mainRouterManager.use("/activities", activitiesGetRouter) 
-mainRouterManager.use("/activities", activitiesPostRouter) 
-
-
+mainRouterManager.use("/countries", countriesGetRouter);
+mainRouterManager.use("/activities", activitiesGetRouter);
+mainRouterManager.use("/activities", activitiesPostRouter);
+mainRouterManager.use("/activities", activitiesEditRouter);
 
 module.exports = mainRouterManager;
 
@@ -26,5 +23,7 @@ El handler es el 2° arg de la router, el que maneja la req.
 handeler recibe la request, unifica datos y regresa la response
 Por su lado el handler invoca al controller 🚫 no interactúa con fuentes externas
 para el caso del PI, Fake api y bd. 
-El controller otra f() que interactua con las fuentes externas 
+El controller otra f() que interactua con las fuentes externas. 
+
+SE AGREGA PARA EDIT
 */

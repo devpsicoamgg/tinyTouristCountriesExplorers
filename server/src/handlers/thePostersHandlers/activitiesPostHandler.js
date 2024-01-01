@@ -6,7 +6,9 @@ F() CONTROLLER.
 recibe por body la req
 */
 
-const { activitiesPostController } = require("../../controllers/thePostersControllers/activitiesPostController.js");
+const {
+  activitiesPostController,
+} = require("../../controllers/thePostersControllers/activitiesPostController.js");
 
 const activitiesPostHandler = async (req, res) => {
   const { name, difficulty, duration, season, description, id } = req.body;
@@ -29,7 +31,6 @@ const activitiesPostHandler = async (req, res) => {
 module.exports = {
   activitiesPostHandler,
 };
-
 
 /* 
 Se exporta no la f() sino el objeto por medio de { }

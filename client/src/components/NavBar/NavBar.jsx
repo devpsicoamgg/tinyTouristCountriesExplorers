@@ -28,9 +28,12 @@ const NavBar = ({
   const handleNavigateToWelcomePage = () => {
     navigate(ROUTES.WELCOME_PAGE);
   };
+
   const handleNavigateToActivity = () => {
     navigate(ROUTES.ACTIVITIES_POST);
   };
+
+
   
   useEffect(() => {
     dispatch(getActivities());
@@ -47,6 +50,7 @@ const NavBar = ({
             alt="Title"
           />
           <SearchBar handleChange={handleChange} handleSubmit={handleSubmit} />
+       
         <img src={CREATEACTIMG} alt="Activities" className={styles.createActImgLink} onClick={handleNavigateToActivity}/> 
         </span>
         <div className={styles.containerNavBarSecondOne}>

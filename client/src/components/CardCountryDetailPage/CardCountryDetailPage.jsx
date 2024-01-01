@@ -97,27 +97,29 @@ const CardCountryDetailPage = () => {
                         <p>
                           <b>Date Added:</b> 🗓️ {activity.date_added}
                         </p>
-                        <p className={styles.pSpecial}>
-                          <b>Description:</b> ✍🏼{activity.description}
-                        </p>
+                        <div className={styles.pSpecial}>
+                          <p>
+                            <b>Description:</b> ✍🏼{activity.description}
+                          </p>
+                        </div>
                         <hr className={styles.hr} />
                       </details>
                     </div>
                   ))}
                   <hr />
-                  <a className={styles.aref} href={ROUTES.ACTIVITIES_POST}>
+                  <a className={styles.aref} href={ROUTES.ACTIVITIES_EDIT}>
                     {" "}
-                    🛠️{" "}
+                    Update 🛠️{" "}
                   </a>
                 </>
               ) : (
-                <p>
-                  Join the fun! Be the first one to
+                <div>
+                  <p>Join the fun! Be the first one to</p>
                   <a className={styles.aref} href={ROUTES.ACTIVITIES_POST}>
                     {" "}
                     🛠️ create an activity 👈🏽{" "}
                   </a>
-                </p>
+                </div>
               )}
             </div>
           </div>

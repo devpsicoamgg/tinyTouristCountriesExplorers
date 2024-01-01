@@ -1,0 +1,117 @@
+.mainDiv {
+  margin: 0;
+  padding: 40px;
+  background: linear-gradient(to top right, #ff0090, #ff99008e, #ff9900);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.divOne {
+  display: flex;
+  margin-left: 20px;
+  z-index: 2;
+}
+
+.tableHead {
+  background-color: #002a4a;
+  color: white;
+}
+
+.tableBody tr:nth-child(even) {
+  background-color: #f0f8ff;
+}
+
+.tableBody tr:nth-child(odd) {
+  background-color: #0caadf;
+}
+
+.divTwo {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-top: -15%; 
+  z-index: 2;
+}
+
+.imgContainer {
+  text-align: center;
+  margin-top: -16%; 
+  margin-left: -18%;
+  display: block;
+}
+
+.imgForm {
+  width: 20%;
+}
+
+.firstLine,
+.SecondLine,
+.lasOneLine {
+  margin-bottom: 10px;
+}
+
+.inputs {
+  width: 100%; 
+  padding: 8px;
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+
+.editBTN {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.editBTNSend {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: -200%;
+  margin-top: 200%;
+  
+}
+
+.editBTN:hover,
+.editBTNSend:hover {
+  background-color: #000000;
+}
+
+.disabledText {
+  background-color: #a2a2a2;
+  color: rgb(91, 0, 0);
+  text-shadow: 2px 2px 4px #33ff00;
+  width: 100%; /* Utiliza el ancho completo del contenedor */
+  padding: 8px;
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.footerContent {
+  max-width: 250px; margin: 0 auto; 
+}
+
+
+.homeLink {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.homeLink:hover {
+  transform: scale(1.5);
+  filter: drop-shadow(4px 4px 8px rgb(0, 0, 0));
+}

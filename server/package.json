@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon index.js",
+    "api-server": "json-server api/db.json --watch --port 5000", 
     "test": "jest --detectOpenHandles",
-    "start": "concurrently \"npm run server\" \"npm run api\""
+    "start": "concurrently \"npm run server\" \"npm run api-server\""
   },
   "author": "",
   "license": "ISC",

@@ -7,6 +7,7 @@ import FormActivityPage from "./components/FormActivityPage/FormActivityPage";
 import CardCountryDetailPage from "./components/CardCountryDetailPage/CardCountryDetailPage";
 import Error404 from "./components/Error404/Error404";
 import "./App.css";
+import EditForm from "./components/EditForm/EditForm";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path={ROUTES.HOME} element={<HomePage />} />
           <Route path={ROUTES.ACTIVITIES_POST} element={<FormActivityPage />} />
           <Route path={ROUTES.COUNTRY_DETAIL} element={<CardCountryDetailPage />} />
+          <Route path={ROUTES.ACTIVITIES_EDIT} element={<EditForm />} />
           <Route path={ROUTES.ERROR404} element={<Error404 />} />
         </Routes>
       </div>

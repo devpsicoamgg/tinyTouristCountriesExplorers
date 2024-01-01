@@ -11,6 +11,7 @@ import {
   FILTER_BY_CONTINENT,
   ORDER,
   POST_NEW_ACTIVITY,
+  EDIT_ACTIVITY,
 } from "../actions/actionTypes";
 
 const initialState = {
@@ -130,6 +131,16 @@ case POST_NEW_ACTIVITY:
     activitiesCreated: [...state.activitiesCreated, action.payload],
   };
 
+  case EDIT_ACTIVITY: {
+    const { activityId, updatedData } = action.payload;
+    const updatedActivities = state.activitiesList.map((activity) =>
+      activity.id === activityId ? { ...activity, ...updatedData } : activity
+    );
+    return {
+      ...state,
+      activitiesList: updatedActivities,
+  }
+}
 
     default:
       return state;

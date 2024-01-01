@@ -10,6 +10,7 @@ import {
   FILTER_BY_CONTINENT,
   ORDER,
   POST_NEW_ACTIVITY,
+  EDIT_ACTIVITY,
 } from "./actionTypes";
 
 export const getAllCountries = () => {
@@ -119,6 +120,35 @@ export const postNewActivity = (input) => {
     } catch (error) {
       console.error("Error on req", error.response?.data || error.message);
       window.alert("An error. Re-check");
+      throw new Error(error);
+    }
+  };
+};
+
+
+
+// actions.js
+
+export const editActivity = (activityId, updatedData) => {
+  return async (dispatch) => {
+    try {
+      // Realizar la solicitud PUT o PATCH para actualizar la actividad
+      const { data } = await axios.put(
+        `http://localhost:3001/activities/${activityId}`,
+        updatedData
+      );
+
+      // Despachar la acción para editar la actividad
+      dispatch({
+        type: EDIT_ACTIVITY,
+        payload: { activityId, updatedData: data },
+      });
+
+      // Retornar los datos actualizados si es necesario
+      return { data, summary: "Activity updated successfully" };
+    } catch (error) {
+      console.error("Error on request", error.response?.data || error.message);
+      window.alert("An error occurred. Please check and try again.");
       throw new Error(error);
     }
   };
