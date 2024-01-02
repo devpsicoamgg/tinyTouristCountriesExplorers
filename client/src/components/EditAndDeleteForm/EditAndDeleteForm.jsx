@@ -4,7 +4,7 @@ import { editActivity, getActivities } from "../../redux/actions/actions";
 import homeImg from "../../images/home.png";
 import { useNavigate } from "react-router-dom";
 import ROUTES from "../../helpers/routesHelper";
-import styles from "../EditForm/EditForm.module.css";
+import styles from "./EditForm.module.css";
 import imgEdit from "../../images/editingMap.png";
 
 const EditForm = () => {
