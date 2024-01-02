@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const {
   editActivity,
-} = require("../../controllers/activitiesPutController/activitiesPutController");
+} = require("../../controllers/thePutController/activitiesPutController");
 const activitiesEditRouter = Router();
 
 activitiesEditRouter.put("/:id", editActivity);

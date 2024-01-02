@@ -61,13 +61,30 @@
 }
 
 .editBTN {
-  background-color: #4caf50;
+  background-color: #0d31d1;
   color: white;
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+
+.delBTN {
+  background-color: #e61b0d;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.delBTN:hover {
+  background-color: #ffffff;
+  color: #e61b0d;
 }
 
 

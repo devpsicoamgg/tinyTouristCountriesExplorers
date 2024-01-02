@@ -28,7 +28,7 @@ const CardCountryDetailPage = () => {
         <div className={styles.containerCardCountryDetailPage}>
           <div className={styles.textContainer}>
             <div className={styles.detailContainer}>
-              <p>
+              <span>
                 <b>Official Name:</b>{" "}
                 {selectedCountry.officialname || `${selectedCountry.name} *`}.{" "}
                 <br />
@@ -64,7 +64,7 @@ const CardCountryDetailPage = () => {
                   </a>{" "}
                   <br />
                 </p>
-              </p>
+              </span>
               <hr className={styles.hr} />
               <img
                 src={homeImg}

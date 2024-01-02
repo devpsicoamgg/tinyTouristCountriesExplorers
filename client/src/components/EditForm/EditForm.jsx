@@ -64,6 +64,7 @@ const EditForm = () => {
                 <th>Country</th>
                 <th>Activity Name</th>
                 <th>Edit</th>
+                <th>Delete </th>
               </tr>
             </thead>
             <tbody className={styles.tableBody}>
@@ -76,15 +77,23 @@ const EditForm = () => {
                       className={styles.editBTN}
                       onClick={() => handleEdit(activity)}
                     >
-                      Edit
+                      Edit ✍🏼
                     </button>
                   </td>
-                </tr>
+                  <td>
+                    <button
+                      className={styles.delBTN}
+                      onClick={() => handleEdit(activity)}
+                    >
+                      Del 🗑️
+                    </button>
+                  </td>
+                </tr> 
               ))}
-            </tbody>
+            </tbody> 
             <tfoot className={styles.tableFoot}>
               <tr>
-                <td colSpan="3">
+                <td colSpan="4">
                   <div className={styles.footerContent}>
                     <img
                       src={homeImg}
@@ -167,6 +176,7 @@ const EditForm = () => {
               type="text"
               value={updatedData.country}
               className={styles.disabledText}
+              readOnly
             />
           </div>
 

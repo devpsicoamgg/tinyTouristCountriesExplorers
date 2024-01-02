@@ -4,11 +4,13 @@ const countriesGetRouter = require("./theGettersRoutes/countriesGetRouters.js");
 const activitiesGetRouter = require("./theGettersRoutes/activitiesGetRouter.js");
 const activitiesPostRouter = require("./thePostersRouters/activitiesPostRouter.js");
 const activitiesEditRouter = require("./theEditRouter/activitiesEditRouter.js");
+const activitiesDeleteRouter = require("./theDeleteRouter/theDeleteRouter.js");
 
 mainRouterManager.use("/countries", countriesGetRouter);
 mainRouterManager.use("/activities", activitiesGetRouter);
 mainRouterManager.use("/activities", activitiesPostRouter);
 mainRouterManager.use("/activities", activitiesEditRouter);
+mainRouterManager.use("/activities", activitiesDeleteRouter);
 
 module.exports = mainRouterManager;
 
