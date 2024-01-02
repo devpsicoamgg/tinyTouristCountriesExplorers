@@ -1,4 +1,3 @@
-import styles from "./HomePage.module.css";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -11,6 +10,7 @@ import {
 import CardsCountries from "../CardsCountries/CardsCountries";
 import NavBar from "../NavBar/NavBar";
 import Pagination from "../Pagination/Pagination";
+import styles from "./HomePage.module.css";
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -56,18 +56,15 @@ const HomePage = () => {
     dispatch(getActivities());
   }, [dispatch]);
 
+  const allCountriesArray = Array.isArray(allCountries) ? allCountries : [];
 
-const allCountriesArray = Array.isArray(allCountries) ? allCountries : [];
-
-const selectedCountries = selectedActivity
-  ? allCountriesArray.filter((country) =>
-      country.Activities.some(
-        (activity) => activity.name === selectedActivity
+  const selectedCountries = selectedActivity
+    ? allCountriesArray.filter((country) =>
+        country.Activities.some(
+          (activity) => activity.name === selectedActivity
+        )
       )
-    )
-  : allCountriesArray;
-
-
+    : allCountriesArray;
 
   const totalPages = Math.ceil(selectedCountries.length / countriesPerPage);
 

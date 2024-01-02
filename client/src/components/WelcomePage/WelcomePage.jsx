@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import styles from "./WelcomePage.module.css";
-import ROUTES from "../../helpers/RoutesHelper";
+import ROUTES from "../../helpers/routesHelper.js";
 import IMGWELCOME from "../../images/girlBusShowing.png";
+import styles from "./WelcomePage.module.css";
 
 const WelcomePage = () => {
 

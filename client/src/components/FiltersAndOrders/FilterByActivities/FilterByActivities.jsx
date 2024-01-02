@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./FilterByActivities.module.css";
 import { toPascalCase } from "../../../helpers/dataTransformation";
+import styles from "./FilterByActivities.module.css";
 
 const FilterByActivities = ({ activitiesList, handleActivityChange }) => {
   const uniqueActivities = new Set(activitiesList.map((activity) => activity.name));

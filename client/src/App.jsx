@@ -1,29 +1,35 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import ROUTES from './helpers/routesHelper'
+import ROUTES from "./helpers/routesHelper";
 import HomePage from "./components/HomePage/HomePage";
 import WelcomePage from "./components/WelcomePage/WelcomePage";
 import FormActivityPage from "./components/FormActivityPage/FormActivityPage";
 import CardCountryDetailPage from "./components/CardCountryDetailPage/CardCountryDetailPage";
 import Error404 from "./components/Error404/Error404";
+import EditForm from "./components/EditAndDeleteForm/EditAndDeleteForm";
 import "./App.css";
-import EditForm from "./components/EditForm/EditForm";
 
 
 function App() {
   return (
     <>
       <div>
-      <div>
-        <Routes>
-          <Route path={ROUTES.WELCOME_PAGE} element={<WelcomePage />} />
-          <Route path={ROUTES.HOME} element={<HomePage />} />
-          <Route path={ROUTES.ACTIVITIES_POST} element={<FormActivityPage />} />
-          <Route path={ROUTES.COUNTRY_DETAIL} element={<CardCountryDetailPage />} />
-          <Route path={ROUTES.ACTIVITIES_EDIT} element={<EditForm />} />
-          <Route path={ROUTES.ERROR404} element={<Error404 />} />
-        </Routes>
-      </div>
+        <div>
+          <Routes>
+            <Route path={ROUTES.WELCOME_PAGE} element={<WelcomePage />} />
+            <Route path={ROUTES.HOME} element={<HomePage />} />
+            <Route
+              path={ROUTES.ACTIVITIES_POST}
+              element={<FormActivityPage />}
+            />
+            <Route
+              path={ROUTES.COUNTRY_DETAIL}
+              element={<CardCountryDetailPage />}
+            />
+            <Route path={ROUTES.ACTIVITIES_EDIT} element={<EditForm />} />
+            <Route path={ROUTES.ERROR404} element={<Error404 />} />
+          </Routes>
+        </div>
       </div>
     </>
   );

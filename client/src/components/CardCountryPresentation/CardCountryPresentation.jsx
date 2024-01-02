@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import ROUTES from "../../helpers/routesHelper";
-import GIFWAIT from "../../images/waiting.gif"
+import GIFWAIT from "../../images/waiting.gif";
 import styles from "./CardCountryPresentation.module.css";
+
 
 function CardCountryPresentation({ country }) {
   const [loadingImg, setLoadingImg] = useState(true);

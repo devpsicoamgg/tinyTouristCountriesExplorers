@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "./Error404.module.css";
 import ROUTES from "../../helpers/routesHelper";
+import styles from "./Error404.module.css";
 
 const Error404 = () => {
   const navigate = useNavigate();

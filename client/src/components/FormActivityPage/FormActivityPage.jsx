@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from "react";
-import IMGFORM from "../../images/girdWord.png";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import homeImg from "../../images/home.png";
+import IMGFORM from "../../images/girdWord.png";
 import ROUTES from "../../helpers/routesHelper";
-import { useDispatch, useSelector } from "react-redux";
-import { getAllCountries, postNewActivity } from "../../redux/actions/actions";
-import styles from "./FormActivityPage.module.css";
+import {
+  getAllCountries,
+  postNewActivity
+} from "../../redux/actions/actions";
 import {
   validateDuration,
   validateDescription,
   validateName,
-  validateDifficulty,
+  validateDifficulty
 } from "../../helpers/validationFormHelper";
+import styles from "./FormActivityPage.module.css";
 import SelectedCountriesList from "./SelectedCountriesList";
+
 
 const FormActivityPage = () => {
   const navigate = useNavigate();

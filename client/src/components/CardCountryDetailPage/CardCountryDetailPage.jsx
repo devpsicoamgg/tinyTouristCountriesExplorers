@@ -2,11 +2,12 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetailCountry } from "../../redux/actions/actions";
 import { useNavigate, useParams } from "react-router-dom";
-import homeImg from "../../images/home.png";
-import ROUTES from "../../helpers/routesHelper";
-import IMGDETAILCOUNTRY from "../../images/boyShowing.png";
-import styles from "../CardCountryDetailPage/CardCountryDetailPage.module.css";
 import Loader from "../Loaders/Loader";
+import homeImg from "../../images/home.png";
+import IMGDETAILCOUNTRY from "../../images/boyShowing.png";
+import ROUTES from "../../helpers/routesHelper";
+import styles from "../CardCountryDetailPage/CardCountryDetailPage.module.css";
+
 
 const CardCountryDetailPage = () => {
   const selectedCountry = useSelector((state) => state.detailCountry);

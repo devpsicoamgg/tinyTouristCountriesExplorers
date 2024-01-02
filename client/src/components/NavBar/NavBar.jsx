@@ -1,17 +1,18 @@
 import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import ROUTES from "../../helpers/routesHelper";
 import { useDispatch, useSelector } from "react-redux";
 import SearchBar from "../SearchBar/SearchBar";
 import FilterByContinent from "../FiltersAndOrders/FilterByContinent/FilterByContinent";
-import styles from "./NavBar.module.css";
-import TITLE from "../../images/titleMain.png";
-import CREATEACTIMG from "../../images/createAct.png";
 import OrderByArea from "../FiltersAndOrders/OrderByArea/OrderByArea";
 import OrderByName from "../FiltersAndOrders/OrderByName/OrderByName";
 import OrderByPopulation from "../FiltersAndOrders/OrderByPopulation/OrderByPopulation";
 import FilterByActivities from "../FiltersAndOrders/FilterByActivities/FilterByActivities";
 import { getActivities } from "../../redux/actions/actions";
+import ROUTES from "../../helpers/routesHelper";
+import TITLE from "../../images/titleMain.png";
+import CREATEACTIMG from "../../images/createAct.png";
+import styles from "./NavBar.module.css";
+
 
 const NavBar = ({
   handleChange,

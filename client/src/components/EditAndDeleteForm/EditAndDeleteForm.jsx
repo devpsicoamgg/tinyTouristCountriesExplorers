@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { editActivity, getActivities } from "../../redux/actions/actions";
-import homeImg from "../../images/home.png";
 import { useNavigate } from "react-router-dom";
+import {
+  editActivity,
+  getActivities,
+  deleteActivity,
+} from "../../redux/actions/actions";
+import homeImg from "../../images/home.png";
 import ROUTES from "../../helpers/routesHelper";
-import styles from "./EditForm.module.css";
+import styles from "./EditAndDeleteForm.module.css";
 import imgEdit from "../../images/editingMap.png";
+
 
 const EditForm = () => {
   const navigate = useNavigate();
@@ -54,6 +59,13 @@ const EditForm = () => {
     });
   };
 
+  const handleDelete = (activityId) => {
+    if (window.confirm("Are you sure you want to delete this activity?")) {
+      dispatch(deleteActivity(activityId));
+      dispatch(getActivities());
+    }
+  };
+
   return (
     <>
       <div className={styles.mainDiv}>
@@ -83,14 +95,14 @@ const EditForm = () => {
                   <td>
                     <button
                       className={styles.delBTN}
-                      onClick={() => handleEdit(activity)}
+                      onClick={() => handleDelete(activity.id)}
                     >
                       Del 🗑️
                     </button>
                   </td>
-                </tr> 
+                </tr>
               ))}
-            </tbody> 
+            </tbody>
             <tfoot className={styles.tableFoot}>
               <tr>
                 <td colSpan="4">
@@ -106,6 +118,10 @@ const EditForm = () => {
               </tr>
             </tfoot>
           </table>
+        </div>
+
+        <div className={styles.divMiddle}>
+          <img className={styles.imgForm} src={imgEdit} alt="Pick" />
         </div>
 
         <div className={styles.divTwo}>
@@ -185,10 +201,6 @@ const EditForm = () => {
               Update
             </button>
           </div>
-        </div>
-
-        <div className={styles.imgContainer}>
-          <img className={styles.imgForm} src={imgEdit} alt="Pick" />
         </div>
       </div>
     </>

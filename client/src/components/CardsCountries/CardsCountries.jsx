@@ -3,6 +3,7 @@ import styles from "./CardsCountries.module.css";
 import CardCountryPresentation from "../CardCountryPresentation/CardCountryPresentation";
 import Loader from "../Loaders/Loader";
 
+
 const CardsCountries = ({
   allCountries,
   currentPage,
