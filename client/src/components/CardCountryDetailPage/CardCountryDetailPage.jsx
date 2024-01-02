@@ -25,8 +25,10 @@ const CardCountryDetailPage = () => {
 
   return (
     <>
+    
       {selectedCountry ? (
         <div className={styles.containerCardCountryDetailPage}>
+          
           <div className={styles.textContainer}>
             <div className={styles.detailContainer}>
               <span>
@@ -124,8 +126,9 @@ const CardCountryDetailPage = () => {
               )}
             </div>
           </div>
+          
           <div className={styles.imageContainer}>
-            <img src={IMGDETAILCOUNTRY} alt={"DETAILS"} />
+            <img src={IMGDETAILCOUNTRY} alt={"loading Details Img"} />
           </div>
         </div>
       ) : (
