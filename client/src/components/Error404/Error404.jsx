@@ -11,7 +11,7 @@ const Error404 = () => {
   };
 
   return (
-    <div className={styles.containerError404Page}>
+    <div data-testid="error404"  className={styles.containerError404Page}>
       <p className={styles.errorText} onClick={handleNavigateToHome}>
         Oopsie-daisy!
         <br /> Error 404
