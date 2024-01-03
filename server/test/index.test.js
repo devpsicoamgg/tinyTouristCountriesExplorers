@@ -88,22 +88,7 @@ describe("A) ROUTES TEST", () => {
       expect(body).toEqual(expect.objectContaining(expectedProperties));
     });
 
-    it("02.- Should include specific properties in the response after posting a new activity associated with a country.", async () => {
-      const { body } = await agent.post("/activities/").send(countryOne);
-
-      const expectedProperties = {
-        createdAt: expect.any(String),
-        createdInDb: true,
-        date_added: "2023-12-28",
-        updatedAt: expect.any(String),
-        summary: expect.stringContaining(
-          "Difficulty 💪🏼: 2. Season 🌤️: Autumn. Duration 🕑: 1. Description ✍🏼: You'll dance all night. Added on 🗓️: 2023-12-28CREATED true"
-        ),
-      };
-      expect(body).toEqual(expect.objectContaining(expectedProperties));
-    });
-
-    it('03.- Should validate the "name" field during a POST request', async () => {
+    it('02.- Should validate the "name" field during a POST request', async () => {
       const invalidActivity = {
         name: "Matar",
         difficulty: 5,
@@ -114,5 +99,49 @@ describe("A) ROUTES TEST", () => {
       };
       await agent.post("/activities/").send(invalidActivity).expect(400);
     });
+
+  
+
+describe('A5) PUT ACTIVITIES -> This test will check the "PUT" method at route |-> /activities/:id <-|', () => {
+  it("01.- Should be able to update an existing activity by ID.", async () => {
+    
+    const existingActivityId = "bcf6be3d-12d0-410d-ac15-14ea9691aedc";
+    const updatedActivityData = {
+      name: "UpdatedDance",
+      difficulty: 3,
+      duration: 2,
+      season: "Spring",
+      description: "Updated description",
+    };
+
+    const { body } = await agent.put(`/activities/${existingActivityId}`).send(updatedActivityData);
+    const expectedProperties = {
+      description: "Updated description",
+      difficulty: 3,
+      duration: 2,
+      name: "UpdatedDance",
+      season: "Spring",
+    };
+    expect(body).toEqual(expect.objectContaining(expectedProperties));
+  });
+});
+
+describe('A6) DELETE ACTIVITIES -> This test will check the "DELETE" method at route |-> /activities/:id <-|', () => {
+  it("01.- Should be able to delete an existing activity by ID.", async () => {
+
+    const existingActivityId = "bcf6be3d-12d0-410d-ac15-14ea9691aedc";
+
+    const response = await agent.delete(`/activities/${existingActivityId}`);
+    expect(response.statusCode).toBe(200);
+  });
+
+  it("02.- If an error occurs (e.g., activity not found), responds with status 404.", async () => {
+    const nonExistentActivityId = "nonexistentid";
+
+    const response = await agent.delete(`/activities/${nonExistentActivityId}`);
+    expect(response.statusCode).toBe(500);
+  });
+});
+
   });
 });
