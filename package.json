@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@testing-library/react": "^14.1.2"
+  },
+  "dependencies": {
+    "jsdom": "^23.0.1"
+  }
+}
